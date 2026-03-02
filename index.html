@@ -287,7 +287,7 @@
       margin-bottom: 32px;
     }
     .hero-logo img {
-      max-height: 160px;
+      max-height: clamp(260px, 40vw, 360px);
       width: auto;
       display: block;
       filter: brightness(1.1);
@@ -821,6 +821,7 @@
       #about, #services, #security-audits, #additional-services, #why-choose, #contact { padding: 72px 0; }
     }
     @media (max-width: 480px) {
+      .hero-logo img { max-height: min(200px, 48vw); }
       .hero-btns { flex-direction: column; }
       .hero-btns .btn { justify-content: center; }
       .tier-card, .contact-form { padding: 28px 20px; }
@@ -1019,7 +1020,6 @@
           <li>Email security configuration review — SPF, DKIM, and DMARC</li>
           <li>Admin account inventory and privilege audit</li>
           <li>Backup verification and basic disaster recovery review</li>
-          <li>External vulnerability scan (up to 10 public-facing IPs)</li>
           <li><strong>Deliverable:</strong> Written report with risk ratings and remediation plan</li>
         </ul>
         <a href="#contact" class="btn btn-navy" style="width:100%;justify-content:center;">Request a Quote</a>
@@ -1124,7 +1124,7 @@
           <p>Aurora, Colorado</p>
 
           <h4>Email</h4>
-          <a href="mailto:patrick@bluestrata.io">patrick@bluestrata.io</a>
+          <a href="mailto:Patrick.Welsh@BlueStrata.io">Patrick.Welsh@BlueStrata.io</a>
 
           <h4>Web</h4>
           <a href="https://bluestrata.io" target="_blank" rel="noopener">bluestrata.io</a>
@@ -1135,7 +1135,7 @@
       </div>
 
       <div class="contact-form fade-in delay-1">
-        <form action="mailto:patrick@bluestrata.io" method="post" enctype="text/plain">
+        <form action="mailto:Patrick.Welsh@BlueStrata.io" method="post" enctype="text/plain">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name <span style="color:#e05;">&ast;</span></label>
@@ -1194,7 +1194,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <p>Aurora, Colorado</p>
-        <a href="mailto:patrick@bluestrata.io">patrick@bluestrata.io</a>
+        <a href="mailto:Patrick.Welsh@BlueStrata.io">Patrick.Welsh@BlueStrata.io</a>
         <a href="https://bluestrata.io" target="_blank" rel="noopener">bluestrata.io</a>
       </div>
       <div class="footer-col">
