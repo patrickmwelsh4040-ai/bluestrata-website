@@ -451,6 +451,138 @@
       padding: 100px 0;
     }
     .services-header { margin-bottom: 52px; }
+
+    /* Single-plan managed services card */
+    .plan-card {
+      border: 1.5px solid var(--blue-accent);
+      border-radius: var(--radius-lg);
+      padding: 40px 40px 36px;
+      background: linear-gradient(160deg, #f5f9ff 0%, var(--white) 100%);
+      margin-bottom: 32px;
+    }
+    .plan-card-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e0e8f5;
+    }
+    .plan-card-name {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .plan-card-tagline {
+      font-size: 15px;
+      color: var(--steel);
+      line-height: 1.6;
+    }
+    .plan-card-price {
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .plan-card-price .price-amount {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--navy-deep);
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+    .plan-card-price .price-label {
+      font-size: 12px;
+      color: var(--steel);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .plan-features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 32px;
+      margin-bottom: 28px;
+    }
+    .plan-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #3a5068;
+      line-height: 1.55;
+    }
+    .plan-feature::before {
+      content: '✓';
+      color: var(--blue-accent);
+      font-weight: 700;
+      font-size: 13px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .plan-callout {
+      background: rgba(46,125,209,0.06);
+      border: 1px solid rgba(46,125,209,0.18);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      font-size: 13.5px;
+      color: var(--steel);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+    .plan-callout strong {
+      color: var(--navy-mid);
+      font-style: normal;
+    }
+    .plan-addons {
+      margin-bottom: 28px;
+    }
+    .plan-addons-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 12px;
+    }
+    .plan-addon-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 7px 0;
+      border-bottom: 1px solid #eef1f7;
+      font-size: 13.5px;
+    }
+    .plan-addon-row:last-child {
+      border-bottom: none;
+    }
+    .plan-addon-label {
+      color: #3a5068;
+    }
+    .plan-addon-price {
+      color: var(--navy-mid);
+      font-weight: 600;
+      white-space: nowrap;
+      margin-left: 16px;
+    }
+    .tier-note {
+      text-align: center;
+      font-size: 13px;
+      color: var(--steel);
+      margin-top: 8px;
+      padding-top: 24px;
+      border-top: 1px solid #eef1f7;
+      font-style: italic;
+    }
+
+    /* ══════════════════════════════════
+       SECURITY AUDITS
+    ══════════════════════════════════ */
+    #security-audits {
+      background: var(--off-white);
+      padding: 100px 0;
+    }
     .tiers-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -525,82 +657,128 @@
       margin-top: 2px;
       flex-shrink: 0;
     }
-    .tier-features .inherited {
-      color: var(--steel-light);
-      font-style: italic;
-    }
-    .tier-note {
-      text-align: center;
-      font-size: 13px;
-      color: var(--steel);
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid #eef1f7;
-      font-style: italic;
-    }
 
     /* ══════════════════════════════════
-       SECURITY AUDITS
+       PROJECT SERVICES
     ══════════════════════════════════ */
-    #security-audits {
-      background: var(--off-white);
-      padding: 100px 0;
-    }
-
-    /* ══════════════════════════════════
-       ADDITIONAL SERVICES
-    ══════════════════════════════════ */
-    #additional-services {
+    #project-services {
       background: var(--white);
       padding: 100px 0;
     }
-    .addl-grid {
+    .project-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 52px;
+      gap: 20px;
+      margin-top: 48px;
     }
-    .addl-card {
+    .project-card {
       border: 1.5px solid #e0e7ef;
       border-radius: var(--radius-lg);
-      padding: 32px 28px;
+      padding: 28px 24px;
       transition: var(--transition);
-      display: flex;
-      flex-direction: column;
     }
-    .addl-card:hover {
+    .project-card:hover {
       border-color: var(--blue-accent);
       box-shadow: var(--shadow-card);
       transform: translateY(-3px);
     }
-    .addl-card-icon {
-      font-size: 30px;
-      margin-bottom: 16px;
+    .project-card-icon {
+      font-size: 26px;
+      margin-bottom: 14px;
+      display: block;
     }
-    .addl-card h3 {
-      font-size: 18px;
+    .project-card h3 {
+      font-size: 16px;
       font-weight: 700;
       color: var(--navy-deep);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
+      line-height: 1.3;
     }
-    .addl-card p {
-      font-size: 14px;
+    .project-card p {
+      font-size: 13.5px;
       color: var(--steel);
-      line-height: 1.75;
-      flex: 1;
-      margin-bottom: 24px;
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .project-card-price {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue-accent);
     }
 
     /* ══════════════════════════════════
-       WHY CHOOSE
+       CONSULTING
     ══════════════════════════════════ */
-    #why-choose {
+    #consulting {
+      background: var(--off-white);
+      padding: 100px 0;
+    }
+    .consulting-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-top: 48px;
+    }
+    .rate-table {
+      background: var(--white);
+      border: 1px solid #e0e7ef;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .rate-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 14px 24px;
+      border-bottom: 1px solid #eef1f7;
+      font-size: 14px;
+    }
+    .rate-row:last-child {
+      border-bottom: none;
+    }
+    .rate-row-label {
+      color: #3a5068;
+      line-height: 1.4;
+    }
+    .rate-row-price {
+      font-weight: 700;
+      color: var(--navy-deep);
+      white-space: nowrap;
+      margin-left: 16px;
+    }
+    .consulting-note {
+      background: var(--white);
+      border: 1px solid #e0e7ef;
+      border-radius: var(--radius-lg);
+      padding: 28px 28px;
+    }
+    .consulting-note h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy-deep);
+      margin-bottom: 14px;
+    }
+    .consulting-note p {
+      font-size: 14px;
+      color: var(--steel);
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+    .consulting-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ══════════════════════════════════
+       ROADMAP
+    ══════════════════════════════════ */
+    #roadmap {
       background: var(--navy-deep);
       padding: 100px 0;
       position: relative;
       overflow: hidden;
     }
-    #why-choose::before {
+    #roadmap::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -609,24 +787,82 @@
         radial-gradient(ellipse 50% 50% at 20% 70%, rgba(74,158,255,0.07) 0%, transparent 60%);
       pointer-events: none;
     }
+    .roadmap-header { margin-bottom: 52px; }
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 40px;
+    }
+    .roadmap-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: var(--transition);
+    }
+    .roadmap-item:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(74,158,255,0.25);
+    }
+    .roadmap-item-icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .roadmap-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .roadmap-item p {
+      font-size: 13.5px;
+      color: var(--steel-light);
+      line-height: 1.7;
+    }
+    .roadmap-callout {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(74,158,255,0.20);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      font-size: 14px;
+      color: var(--steel-light);
+      line-height: 1.75;
+      position: relative;
+      z-index: 1;
+      font-style: italic;
+    }
+    .roadmap-callout strong {
+      color: var(--blue-bright);
+      font-style: normal;
+    }
+
+    /* ══════════════════════════════════
+       WHY CHOOSE
+    ══════════════════════════════════ */
+    #why-choose {
+      background: var(--white);
+      padding: 100px 0;
+    }
     .why-header { margin-bottom: 56px; }
     .why-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
-      position: relative;
-      z-index: 1;
     }
     .why-item {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: var(--off-white);
+      border: 1px solid #e8edf5;
       border-radius: var(--radius-lg);
       padding: 32px 28px;
       transition: var(--transition);
     }
     .why-item:hover {
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(74,158,255,0.25);
+      border-color: var(--blue-accent);
+      box-shadow: 0 8px 32px rgba(46,125,209,0.08);
       transform: translateY(-3px);
     }
     .why-icon {
@@ -637,12 +873,12 @@
     .why-item h3 {
       font-size: 18px;
       font-weight: 700;
-      color: var(--white);
+      color: var(--navy-deep);
       margin-bottom: 10px;
     }
     .why-item p {
       font-size: 14.5px;
-      color: var(--steel-light);
+      color: var(--steel);
       line-height: 1.75;
     }
 
@@ -805,7 +1041,12 @@
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .about-cards { grid-template-columns: 1fr 1fr; }
       .tiers-grid { grid-template-columns: 1fr; }
-      .addl-grid { grid-template-columns: 1fr 1fr; }
+      .plan-card-header { grid-template-columns: 1fr; }
+      .plan-card-price { text-align: left; }
+      .plan-features-grid { grid-template-columns: 1fr; }
+      .project-grid { grid-template-columns: 1fr 1fr; }
+      .consulting-grid { grid-template-columns: 1fr; }
+      .roadmap-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -815,10 +1056,11 @@
       .hamburger { display: flex; }
       .about-cards { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
-      .addl-grid { grid-template-columns: 1fr; }
+      .project-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bar { flex-direction: column; text-align: center; }
-      #about, #services, #security-audits, #additional-services, #why-choose, #contact { padding: 72px 0; }
+      #about, #services, #security-audits, #project-services, #consulting, #roadmap, #why-choose, #contact { padding: 72px 0; }
+      .plan-card { padding: 28px 20px; }
     }
     @media (max-width: 480px) {
       .hero-logo img { max-height: min(200px, 48vw); }
@@ -839,8 +1081,9 @@
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#security-audits">Security Audits</a></li>
+        <li><a href="#services">Managed IT</a></li>
+        <li><a href="#security-audits">Assessments</a></li>
+        <li><a href="#project-services">Projects</a></li>
         <li><a href="#why-choose">Why Us</a></li>
         <li><a href="#contact" class="nav-cta">Book a Call</a></li>
       </ul>
@@ -850,8 +1093,9 @@
     </div>
     <div class="mobile-menu" id="mobile-menu">
       <a href="#about" class="mobile-link">About</a>
-      <a href="#services" class="mobile-link">Services</a>
-      <a href="#security-audits" class="mobile-link">Security Audits</a>
+      <a href="#services" class="mobile-link">Managed IT</a>
+      <a href="#security-audits" class="mobile-link">Assessments</a>
+      <a href="#project-services" class="mobile-link">Projects</a>
       <a href="#why-choose" class="mobile-link">Why Us</a>
       <a href="#contact" class="mobile-link">Book a Call</a>
     </div>
@@ -887,7 +1131,7 @@
       <p class="hero-sub fade-in delay-3">We help small businesses clean up Microsoft 365, lock down access, reduce wasted software spend, document the environment, and get real IT ownership before a preventable mistake turns expensive.</p>
       <div class="hero-btns fade-in delay-4">
         <a href="#contact" class="btn btn-primary">Book a 30-Minute Discovery Call</a>
-        <a href="#security-audits" class="btn btn-outline">See the First Step</a>
+        <a href="#security-audits" class="btn btn-outline">Start with a Free Assessment</a>
       </div>
       <div class="hero-trust fade-in delay-4">
         <div class="hero-trust-item">
@@ -903,7 +1147,6 @@
           <span>Microsoft 365 & Security Focused</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -948,7 +1191,6 @@
       <span class="industry-tag">Construction & Trades</span>
       <span class="industry-tag">10–50 User Environments</span>
     </div>
-
   </div>
 </section>
 
@@ -956,123 +1198,255 @@
 <section id="services">
   <div class="container">
     <div class="services-header fade-in">
-      <span class="section-label">Managed Services</span>
-      <h2 class="section-title">Managed IT That Starts with Security and Accountability</h2>
-      <p class="section-sub">BlueStrata is built for businesses that need one accountable operator to clean up the environment, support users, and prevent the kinds of small mistakes that turn into expensive outages, breaches, and wasted spend.</p>
+      <span class="section-label">Managed IT & Security</span>
+      <h2 class="section-title">One Plan. Everything Your Business Needs.</h2>
+      <p class="section-sub">No confusing tier menus. One accountable engineer who knows your environment, keeps it patched and secure, supports your users, and reports back to you every month.</p>
     </div>
 
-    <div class="tiers-grid">
-      <!-- Tier 1 -->
-      <div class="tier-card fade-in">
-        <p class="tier-name">Essentials</p>
-        <p class="tier-best-for">Best for: 10–25 user businesses that need reliable support, baseline security, and a real operating standard</p>
-        <ul class="tier-features">
-          <li>Keep endpoints patched, monitored, and supportable</li>
-          <li>Control onboarding, offboarding, and user access changes</li>
-          <li>Stabilize core networking, Wi-Fi, firewall, and shared devices</li>
-          <li>Provide business-hours remote support with clear ownership</li>
-          <li>Deliver monthly visibility into system health and issues</li>
-          <li>Managed IT plans start at <strong>$1,500/month</strong></li>
-        </ul>
-        <a href="#contact" class="btn btn-navy" style="width:100%;justify-content:center;">Book a Discovery Call</a>
+    <!-- Single managed services plan card -->
+    <div class="plan-card fade-in">
+      <div class="plan-card-header">
+        <div>
+          <div class="plan-card-name">Managed IT & Security</div>
+          <div class="plan-card-tagline">Proactive, security-focused IT management delivered by a senior engineer who treats your business like his own.</div>
+        </div>
+        <div class="plan-card-price">
+          <div class="price-amount">$125–$150</div>
+          <div class="price-label">per user / per month</div>
+          <div class="price-label">$1,500/mo minimum</div>
+        </div>
       </div>
 
-      <!-- Tier 2 -->
-      <div class="tier-card featured fade-in delay-1">
-        <div class="tier-badge">Best Fit</div>
-        <p class="tier-name">Professional</p>
-        <p class="tier-best-for">Best for: 20–50 user firms that need Microsoft 365 hardening, backup oversight, documentation, and stronger security controls</p>
-        <ul class="tier-features">
-          <li class="inherited">Everything in Essentials, plus:</li>
-          <li>Microsoft 365 hardening, MFA, conditional access, and device management</li>
-          <li>Email security improvements, sharing review, and identity cleanup</li>
-          <li>Monthly vulnerability scanning and remediation planning</li>
-          <li>Backup oversight, disaster recovery planning, and quarterly reviews</li>
-          <li>Documentation, asset visibility, and license optimization</li>
-          <li>Professional plans typically start at <strong>$2,500/month</strong></li>
-        </ul>
-        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Talk Through Fit</a>
+      <div class="plan-features-grid">
+        <div class="plan-feature">Endpoint monitoring, patching, and management via professional RMM</div>
+        <div class="plan-feature">Enterprise-grade endpoint detection and response (EDR) on every device</div>
+        <div class="plan-feature">MFA enforcement using Authenticator app — not SMS</div>
+        <div class="plan-feature">Firewall, switch, and access point monitoring with firmware updates</div>
+        <div class="plan-feature">User onboarding and offboarding with documented procedures</div>
+        <div class="plan-feature">Direct remote support during scheduled availability windows</div>
+        <div class="plan-feature">Monthly summary covering patch status, incidents, and actions taken</div>
+        <div class="plan-feature">Up to 5 shared network devices included at no extra charge</div>
       </div>
 
+      <div class="plan-callout">
+        <strong>What this is — and what it isn't.</strong> This is proactive, security-focused IT management. Your devices are patched, protected, and monitored. Your users are set up correctly and locked down. When something breaks, you call one person who already knows your environment. This is not a 24/7 helpdesk or a staffed SOC. It's a senior engineer who treats your business like his own.
+      </div>
+
+      <div class="plan-addons">
+        <div class="plan-addons-title">Additional Pricing</div>
+        <div class="plan-addon-row">
+          <span class="plan-addon-label">Additional devices beyond 2 per user</span>
+          <span class="plan-addon-price">$50/device/mo</span>
+        </div>
+        <div class="plan-addon-row">
+          <span class="plan-addon-label">Shared devices (kiosks, conference PCs)</span>
+          <span class="plan-addon-price">$50–$75/device/mo</span>
+        </div>
+        <div class="plan-addon-row">
+          <span class="plan-addon-label">Additional network devices beyond 5 included</span>
+          <span class="plan-addon-price">$25–$50/device/mo</span>
+        </div>
+        <div class="plan-addon-row">
+          <span class="plan-addon-label">Server management (standard workloads)</span>
+          <span class="plan-addon-price">$150–$250/server/mo</span>
+        </div>
+        <div class="plan-addon-row">
+          <span class="plan-addon-label">Server management (business-critical)</span>
+          <span class="plan-addon-price">$250–$400/server/mo</span>
+        </div>
+        <div class="plan-addon-row">
+          <span class="plan-addon-label">After-hours emergency support</span>
+          <span class="plan-addon-price">$200–$300/hr</span>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:15px;">Book a Discovery Call</a>
     </div>
 
-    <p class="tier-note fade-in">Exact pricing depends on scope, user count, and complexity, but the right first step is usually a discovery call followed by a scoped assessment, hardening project, or managed services proposal.</p>
+    <p class="tier-note fade-in">12-month agreements recommended. Month-to-month available at a 15% premium. No long-term contracts required to get started.</p>
   </div>
 </section>
 
-<!-- ══════════════ SECURITY AUDITS ══════════════ -->
+<!-- ══════════════ SECURITY ASSESSMENTS ══════════════ -->
 <section id="security-audits">
   <div class="container">
     <div class="services-header fade-in">
-      <span class="section-label">Security Audits</span>
-      <h2 class="section-title">The Best First Step for Most New Clients</h2>
-      <p class="section-sub">Most businesses do not need a giant consulting engagement first. They need a clear picture of risk, waste, access, and documentation gaps, followed by an actionable remediation plan.</p>
+      <span class="section-label">Security Assessments</span>
+      <h2 class="section-title">The Right Starting Point for Most Clients</h2>
+      <p class="section-sub">Most client relationships begin with an assessment. We offer a free external scan that requires nothing from you, and a paid deep-dive inside your Microsoft 365 environment.</p>
     </div>
 
     <div class="tiers-grid">
-      <!-- Audit Tier 1 -->
+
+      <!-- Free External Assessment -->
       <div class="tier-card fade-in">
-        <p class="tier-name">Security Baseline Review</p>
-        <p class="tier-best-for">Ideal for: Businesses with little or no formal IT ownership that want a clear first set of priorities</p>
+        <div class="tier-badge" style="background: #2a9d5c;">Free</div>
+        <p class="tier-name">External Security Assessment</p>
+        <p class="tier-best-for">Give us your domain name. No credentials, no tenant access, no risk. Report delivered within 48 hours.</p>
         <ul class="tier-features">
-          <li>Review Microsoft 365 admin access, MFA, forwarding rules, and sharing settings</li>
-          <li>Check endpoint protection, patching, encryption, and backup posture</li>
-          <li>Review email authentication basics such as SPF, DKIM, and DMARC</li>
-          <li>Identify the most likely operational and security gaps</li>
-          <li><strong>Deliverable:</strong> prioritized report with practical next steps</li>
-          <li><strong>Starting at:</strong> $3,000</li>
+          <li>Email authentication review — SPF, DKIM, and DMARC configuration</li>
+          <li>SSL/TLS certificate validity and configuration</li>
+          <li>Exposed services and open ports</li>
+          <li>Employee credentials found in known data breaches</li>
+          <li>Website security headers</li>
+          <li>Subdomain exposure via certificate transparency logs</li>
+          <li><strong>Deliverable:</strong> PDF report with findings rated by severity and plain-language remediation guidance — yours to keep regardless of next steps</li>
         </ul>
-        <a href="#contact" class="btn btn-navy" style="width:100%;justify-content:center;">Request a Baseline Review</a>
+        <a href="#contact" class="btn btn-navy" style="width:100%;justify-content:center;">Request Your Free Assessment</a>
       </div>
 
-      <!-- Audit Tier 2 -->
+      <!-- Authenticated Assessment -->
       <div class="tier-card featured fade-in delay-1">
-        <div class="tier-badge">Popular</div>
-        <p class="tier-name">M365 Hardening & Cleanup Sprint</p>
-        <p class="tier-best-for">Ideal for: Professional services firms that know the environment is messy and want it tightened fast</p>
+        <div class="tier-badge">Paid Engagement</div>
+        <p class="tier-name">Authenticated Security Assessment</p>
+        <p class="tier-best-for">A comprehensive look inside your Microsoft 365 tenant and identity configuration. Requires read-only access and a signed authorization letter.</p>
         <ul class="tier-features">
-          <li>Microsoft 365 hardening, access cleanup, sharing review, and admin review</li>
-          <li>MFA enforcement and conditional access/security baseline recommendations</li>
-          <li>Legacy authentication and email security review</li>
-          <li>Documentation of key risks, changes, and follow-on priorities</li>
-          <li><strong>Deliverable:</strong> improved tenant security plus a remediation roadmap</li>
-          <li><strong>Starting at:</strong> $2,500</li>
+          <li>MFA enrollment status for all users and admin accounts</li>
+          <li>Admin role assignments and privileged access review</li>
+          <li>M365 tenant configuration against industry security benchmarks</li>
+          <li>OAuth consent posture — what third-party apps have access and what permissions they hold</li>
+          <li>Email security — forwarding rules, transport rules, delegate permissions</li>
+          <li>Data protection — SharePoint sharing settings, audit logging, DLP status</li>
+          <li>Microsoft Secure Score with prioritized improvement roadmap</li>
+          <li><strong>Deliverable:</strong> Written findings report with risk ratings, remediation steps, and executive summary — delivered within 5–7 business days</li>
+          <li><strong>Pricing:</strong> $3,000–$5,000 (up to 50 users) · $5,000–$8,000 (50–150 users)</li>
         </ul>
-        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Ask About a Hardening Sprint</a>
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Request a Quote</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ══════════════ ADDITIONAL SERVICES ══════════════ -->
-<section id="additional-services">
+<!-- ══════════════ PROJECT SERVICES ══════════════ -->
+<section id="project-services">
   <div class="container">
     <div class="fade-in">
-      <span class="section-label">Additional Services</span>
-      <h2 class="section-title">Other Ways to Work Together</h2>
+      <span class="section-label">Project Services</span>
+      <h2 class="section-title">Standalone Engagements for Specific Needs</h2>
+      <p class="section-sub">Fixed-fee projects with defined deliverables. No retainer required. If you need something not listed here, ask — we'll scope it and quote it.</p>
     </div>
 
-    <div class="addl-grid">
-      <div class="addl-card fade-in">
-        <div class="addl-card-icon">📄</div>
-        <h3>Documentation & Asset Visibility</h3>
-        <p>For businesses running on tribal knowledge, we build the operational foundation: network diagrams, asset inventories, credential maps, onboarding/offboarding SOPs, vendor contacts, and core support runbooks.</p>
-        <a href="#contact" class="btn btn-ghost">Discuss Documentation</a>
+    <div class="project-grid">
+      <div class="project-card fade-in">
+        <span class="project-card-icon">🔐</span>
+        <h3>M365 Tenant Hardening</h3>
+        <p>Full security configuration of your Microsoft 365 environment — MFA, Conditional Access, email threat protection, audit logging, DLP, and external sharing controls.</p>
+        <div class="project-card-price">$2,500–$7,500</div>
       </div>
-      <div class="addl-card fade-in delay-1">
-        <div class="addl-card-icon">🧰</div>
-        <h3>Scoped Project Work</h3>
-        <p>Use BlueStrata for focused projects such as Microsoft 365 cleanup, tenant hardening, network redesign, backup planning, or small-business infrastructure cleanup without committing to a full retainer on day one.</p>
-        <a href="#contact" class="btn btn-ghost">Discuss a Project</a>
+      <div class="project-card fade-in delay-1">
+        <span class="project-card-icon">🌐</span>
+        <h3>Firewall & Network Setup</h3>
+        <p>Firewall deployment, VLAN segmentation, Wi-Fi hardening, and VPN configuration for secure remote access.</p>
+        <div class="project-card-price">$3,000–$10,000</div>
       </div>
-      <div class="addl-card fade-in delay-2">
-        <div class="addl-card-icon">💸</div>
-        <h3>License & Spend Optimization</h3>
-        <p>We review Microsoft 365 and other core software spend to identify underused licenses, redundant tools, and avoidable waste so you can stop paying for chaos you do not need.</p>
-        <a href="#contact" class="btn btn-ghost">Review My Stack</a>
+      <div class="project-card fade-in delay-2">
+        <span class="project-card-icon">💾</span>
+        <h3>Backup & Disaster Recovery</h3>
+        <p>Design and implement a backup strategy with tested recovery procedures and full documentation.</p>
+        <div class="project-card-price">$2,500–$8,000</div>
+      </div>
+      <div class="project-card fade-in">
+        <span class="project-card-icon">☁️</span>
+        <h3>Cloud Migration (M365)</h3>
+        <p>Migrate email, files, and collaboration to Microsoft 365 — including tenant setup, DNS configuration, and user migration.</p>
+        <div class="project-card-price">$3,000–$12,000</div>
+      </div>
+      <div class="project-card fade-in delay-1">
+        <span class="project-card-icon">🗂️</span>
+        <h3>Incident Response Planning</h3>
+        <p>Develop response playbooks, communication templates, and facilitate a tabletop exercise so your team knows what to do when something goes wrong.</p>
+        <div class="project-card-price">$3,000–$7,500</div>
+      </div>
+      <div class="project-card fade-in delay-2">
+        <span class="project-card-icon">📋</span>
+        <h3>Something Else?</h3>
+        <p>Not every problem fits a package. If you have a specific need — documentation, asset inventory, Azure work, license cleanup — reach out and we'll scope it.</p>
+        <div class="project-card-price">Custom quote</div>
+      </div>
+    </div>
+
+    <p class="tier-note fade-in">Project billing: 50% due at kickoff, 50% upon completion. Change orders for scope adjustments billed at the applicable consulting rate.</p>
+  </div>
+</section>
+
+<!-- ══════════════ CONSULTING ══════════════ -->
+<section id="consulting">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Consulting & Ad-Hoc Support</span>
+      <h2 class="section-title">Expert Help Without a Retainer</h2>
+      <p class="section-sub">For businesses that need specialized help on a specific issue, or organizations with existing IT staff who need senior expertise on demand.</p>
+    </div>
+
+    <div class="consulting-grid">
+      <div class="rate-table fade-in">
+        <div class="rate-row">
+          <span class="rate-row-label">General IT Support & Troubleshooting</span>
+          <span class="rate-row-price">$100–$150/hr</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-row-label">Microsoft 365 Administration</span>
+          <span class="rate-row-price">$125–$175/hr</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-row-label">Security Operations & Threat Response</span>
+          <span class="rate-row-price">$150–$225/hr</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-row-label">Network Design & Configuration</span>
+          <span class="rate-row-price">$150–$200/hr</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-row-label">After-Hours Emergency Support</span>
+          <span class="rate-row-price">$200–$300/hr</span>
+        </div>
       </div>
 
+      <div class="consulting-note fade-in delay-1">
+        <h3>How It Works</h3>
+        <p>Consulting is billed in 30-minute increments. Prepaid block discounts are available: 10-hour block at 10% off, 20-hour block at 15% off.</p>
+        <p>This is a good fit for businesses with an existing IT person or team who need a senior resource for specific Microsoft 365, security, or network challenges — without committing to a full managed relationship.</p>
+        <a href="#contact" class="btn btn-ghost" style="margin-top: 8px;">Start a Conversation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ROADMAP ══════════════ -->
+<section id="roadmap">
+  <div class="container">
+    <div class="roadmap-header fade-in">
+      <span class="section-label" style="color:var(--blue-bright);">Coming Soon</span>
+      <h2 class="section-title light">On the Roadmap</h2>
+      <p class="section-sub light">BlueStrata is actively building new capabilities. These services are in development and will be available to existing clients first.</p>
+    </div>
+
+    <div class="roadmap-grid">
+      <div class="roadmap-item fade-in">
+        <span class="roadmap-item-icon">🤖</span>
+        <h3>AI-Powered Continuous Security Monitoring</h3>
+        <p>Automated OAuth governance, service principal auditing, permission drift detection, and shadow AI agent discovery across your Microsoft tenant.</p>
+      </div>
+      <div class="roadmap-item fade-in delay-1">
+        <span class="roadmap-item-icon">📊</span>
+        <h3>Advanced Security Assessment Tiers</h3>
+        <p>CIS benchmark-aligned audits with automated compliance evidence gathering for organizations that need deeper assurance.</p>
+      </div>
+      <div class="roadmap-item fade-in delay-2">
+        <span class="roadmap-item-icon">🎣</span>
+        <h3>Security Awareness Programs</h3>
+        <p>Phishing simulation campaigns with quarterly training and reporting to build measurable human resilience across your team.</p>
+      </div>
+      <div class="roadmap-item fade-in delay-3">
+        <span class="roadmap-item-icon">🔍</span>
+        <h3>Managed Detection & Response</h3>
+        <p>XDR integration with proactive threat hunting — moving beyond reactive alerting to active defense of your environment.</p>
+      </div>
+    </div>
+
+    <div class="roadmap-callout fade-in">
+      <strong>We don't sell what we haven't built yet.</strong> These capabilities are in active development and testing. When they're ready, existing managed services clients will be the first to benefit — at no additional cost where possible. We'd rather under-promise and over-deliver.
     </div>
   </div>
 </section>
@@ -1081,10 +1455,10 @@
 <section id="why-choose">
   <div class="container">
     <div class="why-header fade-in">
-      <span class="section-label" style="color:var(--blue-bright);">Why BlueStrata</span>
-      <h2 class="section-title light">Why Buyers Choose BlueStrata</h2>
-      <p class="section-sub light">Small businesses usually do not need another vendor. They need a responsible operator who can see risk clearly, communicate plainly, and bring order to an environment that has been running on shortcuts.</p>
-</div>
+      <span class="section-label">Why BlueStrata</span>
+      <h2 class="section-title">Why Buyers Choose BlueStrata</h2>
+      <p class="section-sub">Small businesses usually do not need another vendor. They need a responsible operator who can see risk clearly, communicate plainly, and bring order to an environment that has been running on shortcuts.</p>
+    </div>
     <div class="why-grid">
       <div class="why-item fade-in">
         <span class="why-icon">🎯</span>
@@ -1106,7 +1480,6 @@
         <h3>Clear Communication, Not Black Box IT</h3>
         <p>You get direct updates, documented findings, and a clear next step. No vague jargon, no surprise bills, and no disappearing act after the initial sale.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -1118,14 +1491,14 @@
       <div class="fade-in">
         <span class="section-label">Contact</span>
         <h2 class="section-title" style="margin-bottom:14px;">Book a 30-Minute Discovery Call</h2>
-        <p class="section-sub" style="margin-bottom:36px;">Tell me what is messy, unclear, under-supported, or keeping you up at night. You will leave with a clearer next step, whether that is a baseline review, a hardening sprint, a documentation project, or managed support.</p>
+        <p class="section-sub" style="margin-bottom:36px;">Tell me what is messy, unclear, under-supported, or keeping you up at night. You will leave with a clearer next step, whether that is a free external assessment, a baseline review, a hardening project, or managed support.</p>
 
         <div class="contact-info">
           <h4>Best Fit</h4>
           <p>10–50 user businesses in Aurora, Denver, and the Front Range</p>
 
           <h4>Email</h4>
-          <a href="mailto:Patrick.Welsh@BlueStrata.io">Patrick.Welsh@BlueStrata.io</a>
+          <a href="mailto:patrick@bluestrata.io">patrick@bluestrata.io</a>
 
           <h4>Response Time</h4>
           <p>Replies within one business day</p>
@@ -1136,7 +1509,7 @@
       </div>
 
       <div class="contact-form fade-in delay-1">
-        <form action="mailto:Patrick.Welsh@BlueStrata.io" method="post" enctype="text/plain">
+        <form action="mailto:patrick@bluestrata.io" method="post" enctype="text/plain">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name <span style="color:#e05;">&ast;</span></label>
@@ -1161,12 +1534,11 @@
             <label for="service">What are you looking for?</label>
             <select id="service" name="Service">
               <option value="">Select an option...</option>
-              <option value="Discovery Call">Discovery Call</option>
-              <option value="Security Baseline Review">Security Baseline Review</option>
-              <option value="M365 Hardening Sprint">M365 Hardening Sprint</option>
-              <option value="Managed Services">Managed Services</option>
-              <option value="Documentation / Asset Visibility">Documentation / Asset Visibility</option>
-              <option value="Project-Based Work">Project-Based Work</option>
+              <option value="Free External Assessment">Free External Assessment</option>
+              <option value="Authenticated Security Assessment">Authenticated Security Assessment</option>
+              <option value="Managed IT & Security">Managed IT & Security</option>
+              <option value="Project Work">Project Work</option>
+              <option value="Ad-Hoc Consulting">Ad-Hoc Consulting</option>
               <option value="Not Sure Yet">Not Sure Yet</option>
             </select>
           </div>
@@ -1175,10 +1547,9 @@
             <textarea id="message" name="Message" placeholder="Tell me about your business, approximate user count, Microsoft 365 setup, biggest pain points, and what feels most under control right now."></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:15px;">Start the Conversation</button>
-          <p class="form-note">For most new clients, the next step is a discovery call followed by a scoped baseline review, hardening sprint, documentation project, or managed services proposal.</p>
+          <p class="form-note">The simplest starting point is a free external assessment — just your domain name and 48 hours. No credentials, no commitment.</p>
         </form>
       </div>
-
     </div>
   </div>
 </section>
@@ -1196,13 +1567,14 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <p>Aurora, Colorado</p>
-        <a href="mailto:Patrick.Welsh@BlueStrata.io">Patrick.Welsh@BlueStrata.io</a>
+        <a href="mailto:patrick@bluestrata.io">patrick@bluestrata.io</a>
         <a href="https://bluestrata.io" target="_blank" rel="noopener">bluestrata.io</a>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
-        <a href="#services">Services</a>
-        <a href="#security-audits">Security Audits</a>
+        <a href="#services">Managed IT</a>
+        <a href="#security-audits">Assessments</a>
+        <a href="#project-services">Projects</a>
         <a href="#contact">Book a Call</a>
         <a href="https://defaultgateway.substack.com" target="_blank" rel="noopener">The Default Gateway ↗</a>
       </div>
