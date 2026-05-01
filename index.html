@@ -1249,6 +1249,31 @@
       margin: 0 auto 32px;
     }
 
+    /* ── INDUSTRIES GRID LIST ── */
+    .industries-grid-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 32px;
+      margin-top: 16px;
+    }
+    .industries-grid-list li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #2a3f55;
+      line-height: 1.4;
+    }
+    .industries-grid-list li::before {
+      content: "→";
+      color: var(--blue-accent);
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
     /* ── RESPONSIVE — new sections ── */
     @media (max-width: 900px) {
       .problem-grid      { grid-template-columns: 1fr; gap: 32px; }
@@ -1259,10 +1284,11 @@
       .baseline-deliverables { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
-      .assess-grid { grid-template-columns: 1fr; }
-      .steps-grid  { grid-template-columns: 1fr; }
-      .ai-grid     { grid-template-columns: 1fr; }
-      .baseline-card { padding: 28px 24px; }
+      .assess-grid          { grid-template-columns: 1fr; }
+      .steps-grid           { grid-template-columns: 1fr; }
+      .ai-grid              { grid-template-columns: 1fr; }
+      .baseline-card        { padding: 28px 24px; }
+      .industries-grid-list { grid-template-columns: 1fr; gap: 10px; }
     }
   </style>
 </head>
@@ -1703,15 +1729,15 @@
         </ul>
       </div>
       <div class="fade-in delay-2">
-        <h3 style="font-size:16px;font-weight:700;color:var(--navy-deep);margin-bottom:16px;">Industries Served</h3>
-        <div class="industries-strip" style="margin-top:0;">
-          <span class="industry-tag">Professional Services</span>
-          <span class="industry-tag">Law Firms</span>
-          <span class="industry-tag">Accounting &amp; Insurance</span>
-          <span class="industry-tag">Healthcare Adjacent</span>
-          <span class="industry-tag">Construction &amp; Trades</span>
-          <span class="industry-tag">Financial Services</span>
-        </div>
+        <h3 style="font-size:16px;font-weight:700;color:var(--navy-deep);margin-bottom:4px;">Industries Served</h3>
+        <ul class="industries-grid-list">
+          <li>Professional Services</li>
+          <li>Financial Services</li>
+          <li>Law Firms</li>
+          <li>Healthcare Adjacent</li>
+          <li>Accounting &amp; Insurance</li>
+          <li>Construction &amp; Trades</li>
+        </ul>
       </div>
     </div>
 
