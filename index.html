@@ -1077,7 +1077,8 @@
     #security-baseline { padding: 80px 0; background: var(--navy-deep); }
     #what-we-assess    { padding: 80px 0; }
     #how-it-works      { padding: 80px 0; background: var(--off-white); }
-    #remediation       { padding: 80px 0; }
+    #scenarios         { padding: 80px 0; background: var(--white); }
+    #remediation       { padding: 80px 0; background: var(--off-white); }
     #ai-automation     { padding: 80px 0; background: var(--navy-deep); }
     #industries        { padding: 80px 0; background: var(--off-white); }
     #insights          { padding: 64px 0; background: var(--navy-mid); }
@@ -1187,6 +1188,66 @@
       margin: 0;
     }
 
+    /* ── SCENARIOS ── */
+    .scenario-tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 11px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+      border: 1px solid;
+    }
+    .scenario-tag-identity { color: #185FA5; background: #E6F1FB; border-color: #B5D4F4; }
+    .scenario-tag-ai       { color: #3C3489; background: #EEEDFE; border-color: #CECBF6; }
+    .scenario-tag-backup   { color: #633806; background: #FAEEDA; border-color: #FAC775; }
+    .scenario-tag-m365     { color: #085041; background: #E1F5EE; border-color: #9FE1CB; }
+    .scenario-tag-network  { color: #27500A; background: #EAF3DE; border-color: #C0DD97; }
+    .scenario-tag-stabilize{ color: #444441; background: #F1EFE8; border-color: #D3D1C7; }
+    .scenario-divider {
+      border: none;
+      border-top: 1px solid #eef1f7;
+      margin: 14px 0 12px;
+    }
+    .scenario-outcome-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 6px;
+    }
+    .scenario-next {
+      font-size: 13px;
+      color: var(--steel);
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #eef1f7;
+    }
+    .scenario-next strong { color: var(--navy-mid); font-weight: 600; }
+    .scenario-cta-block {
+      background: var(--off-white);
+      border: 1px solid #e0e7ef;
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .scenario-cta-text {
+      font-size: 15px;
+      color: var(--steel);
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0;
+    }
+
     /* ── AI & AUTOMATION ── */
     .ai-grid {
       display: grid;
@@ -1282,6 +1343,7 @@
       .ai-grid           { grid-template-columns: repeat(2, 1fr); }
       .industries-two-col{ grid-template-columns: 1fr; gap: 32px; }
       .baseline-deliverables { grid-template-columns: 1fr; }
+      .scenario-cta-block { flex-direction: column; }
     }
     @media (max-width: 768px) {
       .assess-grid          { grid-template-columns: 1fr; }
@@ -1289,6 +1351,7 @@
       .ai-grid              { grid-template-columns: 1fr; }
       .baseline-card        { padding: 28px 24px; }
       .industries-grid-list { grid-template-columns: 1fr; gap: 10px; }
+      #scenarios            { padding: 72px 0; }
     }
   </style>
 </head>
@@ -1303,6 +1366,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#security-baseline">Security Baseline</a></li>
+        <li><a href="#scenarios">When to Call</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#ai-automation">AI &amp; Automation</a></li>
         <li><a href="#industries">Industries</a></li>
@@ -1315,6 +1379,7 @@
     </div>
     <div class="mobile-menu" id="mobile-menu">
       <a href="#security-baseline" class="mobile-link">Security Baseline</a>
+      <a href="#scenarios" class="mobile-link">When to Call</a>
       <a href="#services" class="mobile-link">Services</a>
       <a href="#ai-automation" class="mobile-link">AI &amp; Automation</a>
       <a href="#industries" class="mobile-link">Industries</a>
@@ -1327,7 +1392,6 @@
 <!-- ══════════════ HERO ══════════════ -->
 <section id="home">
   <div class="hero-bg">
-    <!-- Geometric grid pattern -->
     <svg viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
@@ -1335,7 +1399,6 @@
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#grid)"/>
-      <!-- diagonal accent lines -->
       <line x1="0" y1="200" x2="600" y2="800" stroke="#2e7dd1" stroke-width="0.8" opacity="0.5"/>
       <line x1="800" y1="0" x2="1400" y2="600" stroke="#2e7dd1" stroke-width="0.8" opacity="0.5"/>
       <line x1="200" y1="0" x2="1000" y2="900" stroke="#4a9eff" stroke-width="0.4" opacity="0.4"/>
@@ -1362,11 +1425,11 @@
         </div>
         <div class="hero-trust-item">
           <div class="hero-trust-icon">🏢</div>
-          <span>Local to Aurora & Denver</span>
+          <span>Local to Aurora &amp; Denver</span>
         </div>
         <div class="hero-trust-item">
           <div class="hero-trust-icon">🔒</div>
-          <span>Microsoft 365 & Security Focused</span>
+          <span>Microsoft 365 &amp; Security Focused</span>
         </div>
       </div>
     </div>
@@ -1515,6 +1578,90 @@
         <p>BlueStrata can execute targeted remediation sprints or provide ongoing managed IT and security support.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ══════════════ WHEN TO CALL BLUESTRATA ══════════════ -->
+<section id="scenarios">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">When to Call BlueStrata</span>
+      <h2 class="section-title">Problems That Usually Point to a Security &amp; Operations Baseline</h2>
+      <p class="section-sub">Most owners don't think in IT categories — they think in situations. If any of these sound familiar, these are fixable problems. But only once they're visible.</p>
+    </div>
+
+    <div class="project-grid" style="margin-top:48px;">
+
+      <div class="project-card fade-in">
+        <div class="scenario-tag scenario-tag-identity">Identity &amp; access</div>
+        <h3>"Former employees may still have access to our systems."</h3>
+        <p>People have left, but nobody is confident their Microsoft 365 accounts, shared mailboxes, or file access were fully removed. Admin rights have accumulated, and there's no consistent offboarding process.</p>
+        <hr class="scenario-divider" />
+        <div class="scenario-outcome-label">What we do</div>
+        <p>We audit active accounts, admin roles, MFA coverage, mail forwarding rules, external file sharing, and third-party app permissions. We clear the urgent exposures and give you a prioritized roadmap for the rest.</p>
+        <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline</div>
+      </div>
+
+      <div class="project-card fade-in delay-1">
+        <div class="scenario-tag scenario-tag-ai">AI governance</div>
+        <h3>"Staff are using AI tools, and we have no policy or guardrails."</h3>
+        <p>Employees are using ChatGPT, AI meeting note tools, and browser extensions. Nobody knows what data is being pasted in, what accounts those tools have access to, or how to allow AI adoption without creating new risk.</p>
+        <hr class="scenario-divider" />
+        <div class="scenario-outcome-label">What we do</div>
+        <p>We assess current AI usage, review Microsoft 365 data exposure, identify risky workflows, draft an acceptable-use policy, and build a 30/60/90-day AI governance roadmap with approved tool categories.</p>
+        <div class="scenario-next"><strong>Best next step:</strong> AI &amp; Automation Assessment or Security &amp; Operations Baseline</div>
+      </div>
+
+      <div class="project-card fade-in delay-2">
+        <div class="scenario-tag scenario-tag-backup">Backup &amp; recovery</div>
+        <h3>"Our backups say they're working, but nobody has tested a restore."</h3>
+        <p>The backup software shows green checkmarks. But the business has never performed a real restore test, there's no documented recovery process, and nobody knows how long it would take to get back online after an incident.</p>
+        <hr class="scenario-divider" />
+        <div class="scenario-outcome-label">What we do</div>
+        <p>We verify backup jobs, perform a controlled restore test, document recovery credentials, identify gaps in Microsoft 365 backup coverage, define your recovery expectations, and produce a written gap report.</p>
+        <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline, then Backup &amp; DR Cleanup</div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="scenario-tag scenario-tag-m365">Microsoft 365</div>
+        <h3>"Microsoft 365 has turned into permission chaos."</h3>
+        <p>Files are shared externally without oversight, MFA is inconsistent, too many people have admin rights, and nobody knows which third-party apps still have access to the tenant. It was manageable when the business was smaller.</p>
+        <hr class="scenario-divider" />
+        <div class="scenario-outcome-label">What we do</div>
+        <p>We harden Microsoft 365 and Entra ID — cleaning up Conditional Access, reviewing OAuth app consent, tightening external sharing, and reviewing DLP and audit logging so you have visibility and control again.</p>
+        <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline, then M365 / Entra ID Hardening</div>
+      </div>
+
+      <div class="project-card fade-in delay-1">
+        <div class="scenario-tag scenario-tag-network">Network &amp; devices</div>
+        <h3>"Wi-Fi, VPN, printers, and shared devices keep interrupting work."</h3>
+        <p>Staff lose time to unreliable Wi-Fi, broken scan-to-email, VPN issues, and undocumented shared workstations. The network gear is a mix of whatever was purchased over the years, and nobody knows what's actually on the network.</p>
+        <hr class="scenario-divider" />
+        <div class="scenario-outcome-label">What we do</div>
+        <p>We document the network, review firewall and Wi-Fi configuration, inventory devices, and identify the specific sources of friction — then provide a prioritized fix plan that actually resolves the problems.</p>
+        <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline, then Firewall, VPN &amp; Wi-Fi Review</div>
+      </div>
+
+      <div class="project-card fade-in delay-2">
+        <div class="scenario-tag scenario-tag-stabilize">IT stabilization</div>
+        <h3>"We've outgrown the person who used to handle our IT."</h3>
+        <p>The business has grown, but IT still runs on tribal knowledge — undocumented passwords, unclear vendors, inconsistent patching, and one person who "just knows how it works." There's no real support process and no visibility into what's at risk.</p>
+        <hr class="scenario-divider" />
+        <div class="scenario-outcome-label">What we do</div>
+        <p>We inventory users, devices, network gear, Microsoft 365, admin accounts, vendors, and critical systems. We close the most urgent gaps and produce a 90-day stabilization roadmap — moving the business from tribal knowledge to a documented, supportable environment.</p>
+        <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline, then managed support</div>
+      </div>
+
+    </div>
+
+    <div class="scenario-cta-block fade-in">
+      <p class="scenario-cta-text">Not sure which situation fits? Most clients start with a free external security assessment or a 30-minute discovery call. BlueStrata will help you determine the right next step — whether that's a Security &amp; Operations Baseline, a focused remediation sprint, managed support, or an AI governance review.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0;">
+        <a href="#contact" class="btn btn-primary">Book a Discovery Call</a>
+        <a href="#contact" class="btn btn-ghost">Free External Assessment</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1883,6 +2030,7 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <a href="#security-baseline">Security Baseline</a>
+        <a href="#scenarios">When to Call</a>
         <a href="#services">Managed IT</a>
         <a href="#ai-automation">AI &amp; Automation</a>
         <a href="#industries">Industries</a>
@@ -1946,7 +2094,7 @@
       const target = document.querySelector(this.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const offset = 68; // nav height
+      const offset = 68;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     });
