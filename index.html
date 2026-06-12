@@ -41,7 +41,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── UTILITY ── */
     .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
     .section-label {
       display: inline-block;
@@ -82,1288 +81,248 @@
       transition: var(--transition);
       white-space: nowrap;
     }
-    .btn-primary {
-      background: var(--blue-accent);
-      color: var(--white);
-      box-shadow: 0 4px 20px rgba(46,125,209,0.35);
-    }
-    .btn-primary:hover {
-      background: #2570c2;
-      box-shadow: 0 6px 28px rgba(46,125,209,0.5);
-      transform: translateY(-1px);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.35);
-    }
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.65);
-      transform: translateY(-1px);
-    }
-    .btn-navy {
-      background: var(--navy-deep);
-      color: var(--white);
-    }
-    .btn-navy:hover {
-      background: var(--navy-mid);
-      transform: translateY(-1px);
-    }
-    .btn-ghost {
-      background: transparent;
-      color: var(--blue-accent);
-      border: 1.5px solid var(--blue-accent);
-    }
-    .btn-ghost:hover {
-      background: var(--blue-accent);
-      color: var(--white);
-      transform: translateY(-1px);
-    }
+    .btn-primary { background: var(--blue-accent); color: var(--white); box-shadow: 0 4px 20px rgba(46,125,209,0.35); }
+    .btn-primary:hover { background: #2570c2; box-shadow: 0 6px 28px rgba(46,125,209,0.5); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.35); }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.65); transform: translateY(-1px); }
+    .btn-ghost { background: transparent; color: var(--blue-accent); border: 1.5px solid var(--blue-accent); }
+    .btn-ghost:hover { background: var(--blue-accent); color: var(--white); transform: translateY(-1px); }
 
-    /* ── SCROLL FADE ── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
     .fade-in.delay-1 { transition-delay: 0.1s; }
     .fade-in.delay-2 { transition-delay: 0.2s; }
     .fade-in.delay-3 { transition-delay: 0.3s; }
     .fade-in.delay-4 { transition-delay: 0.4s; }
 
-    /* ══════════════════════════════════
-       NAV
-    ══════════════════════════════════ */
     #navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       background: rgba(10,22,40,0.88);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
       transition: box-shadow var(--transition);
     }
-    #navbar.scrolled {
-      box-shadow: 0 4px 32px rgba(0,0,0,0.35);
-    }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-    }
-    .nav-logo img {
-      max-height: 56px;
-      width: auto;
-      display: block;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      list-style: none;
-    }
+    #navbar.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo img { max-height: 56px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
     .nav-links a {
-      display: block;
-      padding: 8px 14px;
-      color: rgba(255,255,255,0.78);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      border-radius: 7px;
-      transition: var(--transition);
-      letter-spacing: 0.01em;
+      display: block; padding: 8px 14px; color: rgba(255,255,255,0.78);
+      text-decoration: none; font-size: 14px; font-weight: 500;
+      border-radius: 7px; transition: var(--transition); letter-spacing: 0.01em;
     }
-    .nav-links a:hover {
-      color: var(--white);
-      background: rgba(255,255,255,0.08);
-    }
-    .nav-cta {
-      background: var(--blue-accent) !important;
-      color: var(--white) !important;
-      padding: 8px 18px !important;
-    }
-    .nav-cta:hover {
-      background: #2570c2 !important;
-    }
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 8px;
-      border-radius: 7px;
-      transition: var(--transition);
-    }
+    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+    .nav-cta { background: var(--blue-accent) !important; color: var(--white) !important; padding: 8px 18px !important; }
+    .nav-cta:hover { background: #2570c2 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border-radius: 7px; transition: var(--transition); }
     .hamburger:hover { background: rgba(255,255,255,0.08); }
-    .hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 2px;
-      transition: var(--transition);
-    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
     .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      padding: 12px 24px 20px;
-      border-top: 1px solid var(--border);
-      gap: 2px;
-    }
-    .mobile-menu a {
-      display: block;
-      padding: 11px 14px;
-      color: rgba(255,255,255,0.78);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-      border-radius: 7px;
-      transition: var(--transition);
-    }
+    .mobile-menu { display: none; flex-direction: column; padding: 12px 24px 20px; border-top: 1px solid var(--border); gap: 2px; }
+    .mobile-menu a { display: block; padding: 11px 14px; color: rgba(255,255,255,0.78); text-decoration: none; font-size: 15px; font-weight: 500; border-radius: 7px; transition: var(--transition); }
     .mobile-menu a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
     .mobile-menu.open { display: flex; }
 
-    /* ══════════════════════════════════
-       HERO
-    ══════════════════════════════════ */
-    #home {
-      min-height: 100vh;
-      background: var(--navy-deep);
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding-top: 68px;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .hero-bg svg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.045;
-    }
-    .hero-glow {
-      position: absolute;
-      top: -180px; right: -180px;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(46,125,209,0.25) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-glow-2 {
-      position: absolute;
-      bottom: -200px; left: -100px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(74,158,255,0.10) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 760px;
-      padding: 0;
-    }
-    .hero-logo {
-      margin-bottom: 32px;
-    }
-    .hero-logo img {
-      max-height: clamp(260px, 40vw, 360px);
-      width: auto;
-      display: block;
-      filter: brightness(1.1);
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(46,125,209,0.15);
-      border: 1px solid rgba(46,125,209,0.30);
-      color: var(--blue-bright);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 50px;
-      margin-bottom: 28px;
-    }
+    #home { min-height: 100vh; background: var(--navy-deep); display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 68px; }
+    .hero-bg { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .hero-bg svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.045; }
+    .hero-glow { position: absolute; top: -180px; right: -180px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(46,125,209,0.25) 0%, transparent 70%); pointer-events: none; }
+    .hero-glow-2 { position: absolute; bottom: -200px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(74,158,255,0.10) 0%, transparent 70%); pointer-events: none; }
+    .hero-content { position: relative; z-index: 2; max-width: 760px; }
+    .hero-logo { margin-bottom: 32px; }
+    .hero-logo img { max-height: clamp(260px, 40vw, 360px); width: auto; display: block; filter: brightness(1.1); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(46,125,209,0.15); border: 1px solid rgba(46,125,209,0.30); color: var(--blue-bright); font-size: 12px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; padding: 6px 14px; border-radius: 50px; margin-bottom: 28px; }
     .hero-badge::before { content: '★'; font-size: 10px; }
-    .hero-headline {
-      font-size: clamp(38px, 6vw, 68px);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      margin-bottom: 24px;
-    }
-    .hero-headline em {
-      font-style: normal;
-      color: var(--blue-bright);
-    }
-    .hero-sub {
-      font-size: clamp(16px, 2vw, 19px);
-      color: var(--steel-light);
-      line-height: 1.75;
-      margin-bottom: 40px;
-      max-width: 620px;
-    }
-    .hero-btns {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .hero-trust {
-      margin-top: 56px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .hero-trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--steel-light);
-      font-size: 13px;
-      font-weight: 500;
-    }
-    .hero-trust-icon {
-      width: 30px; height: 30px;
-      background: rgba(46,125,209,0.15);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-    }
+    .hero-headline { font-size: clamp(38px, 6vw, 68px); font-weight: 900; color: var(--white); line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 24px; }
+    .hero-headline em { font-style: normal; color: var(--blue-bright); }
+    .hero-sub { font-size: clamp(16px, 2vw, 19px); color: var(--steel-light); line-height: 1.75; margin-bottom: 40px; max-width: 620px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-trust { margin-top: 56px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .hero-trust-item { display: flex; align-items: center; gap: 8px; color: var(--steel-light); font-size: 13px; font-weight: 500; }
+    .hero-trust-icon { width: 30px; height: 30px; background: rgba(46,125,209,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
 
-    /* ══════════════════════════════════
-       ABOUT
-    ══════════════════════════════════ */
-    #about {
-      background: var(--off-white);
-      padding: 100px 0;
-    }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: start;
-      margin-bottom: 64px;
-    }
-    .about-text p {
-      color: var(--steel);
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 18px;
-    }
-    .about-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 48px;
-    }
-    .about-card {
-      background: var(--white);
-      border: 1px solid #e8edf5;
-      border-radius: var(--radius-lg);
-      padding: 28px 24px;
-      transition: var(--transition);
-    }
-    .about-card:hover {
-      border-color: var(--blue-accent);
-      box-shadow: 0 8px 32px rgba(46,125,209,0.10);
-      transform: translateY(-3px);
-    }
-    .about-card-icon {
-      font-size: 26px;
-      margin-bottom: 14px;
-      display: block;
-    }
-    .about-card h3 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--navy-deep);
-      margin-bottom: 8px;
-    }
-    .about-card p {
-      font-size: 13.5px;
-      color: var(--steel);
-      line-height: 1.65;
-    }
-    .industries-strip {
-      background: var(--white);
-      border: 1px solid #e8edf5;
-      border-radius: var(--radius-lg);
-      padding: 20px 28px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px 16px;
-    }
-    .industries-strip span:first-child {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      color: var(--steel);
-      margin-right: 8px;
-    }
-    .industry-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--navy-mid);
-      padding: 5px 12px;
-      background: var(--off-white);
-      border-radius: 50px;
-      border: 1px solid #e0e7ef;
-    }
-    .industry-tag::before { content: '·'; color: var(--blue-accent); font-weight: 900; }
+    .plan-card { border: 1.5px solid var(--blue-accent); border-radius: var(--radius-lg); padding: 40px 40px 36px; background: linear-gradient(160deg, #f5f9ff 0%, var(--white) 100%); margin-bottom: 32px; }
+    .plan-card-header { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid #e0e8f5; }
+    .plan-card-name { font-size: 26px; font-weight: 800; color: var(--navy-deep); letter-spacing: -0.02em; margin-bottom: 6px; }
+    .plan-card-tagline { font-size: 15px; color: var(--steel); line-height: 1.6; }
+    .plan-card-price { text-align: right; flex-shrink: 0; }
+    .plan-card-price .price-amount { font-size: 28px; font-weight: 900; color: var(--navy-deep); letter-spacing: -0.02em; white-space: nowrap; }
+    .plan-card-price .price-label { font-size: 12px; color: var(--steel); font-weight: 500; margin-top: 2px; }
+    .plan-features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 32px; margin-bottom: 28px; }
+    .plan-feature { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #3a5068; line-height: 1.55; }
+    .plan-feature::before { content: '✓'; color: var(--blue-accent); font-weight: 700; font-size: 13px; margin-top: 2px; flex-shrink: 0; }
+    .plan-callout { background: rgba(46,125,209,0.06); border: 1px solid rgba(46,125,209,0.18); border-radius: var(--radius); padding: 16px 20px; font-size: 13.5px; color: var(--steel); line-height: 1.7; margin-bottom: 28px; font-style: italic; }
+    .plan-callout strong { color: var(--navy-mid); font-style: normal; }
+    .plan-addons { margin-bottom: 28px; }
+    .plan-addons-title { font-size: 11px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: var(--steel); margin-bottom: 12px; }
+    .plan-addon-row { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-bottom: 1px solid #eef1f7; font-size: 13.5px; }
+    .plan-addon-row:last-child { border-bottom: none; }
+    .plan-addon-label { color: #3a5068; }
+    .plan-addon-price { color: var(--navy-mid); font-weight: 600; white-space: nowrap; margin-left: 16px; }
+    .tier-note { text-align: center; font-size: 13px; color: var(--steel); margin-top: 8px; padding-top: 24px; border-top: 1px solid #eef1f7; font-style: italic; }
 
-    /* ══════════════════════════════════
-       SERVICES
-    ══════════════════════════════════ */
-    #services {
-      background: var(--white);
-      padding: 100px 0;
-    }
-    .services-header { margin-bottom: 52px; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+    .project-card { border: 1.5px solid #e0e7ef; border-radius: var(--radius-lg); padding: 28px 24px; transition: var(--transition); }
+    .project-card:hover { border-color: var(--blue-accent); box-shadow: var(--shadow-card); transform: translateY(-3px); }
+    .project-card-icon { font-size: 26px; margin-bottom: 14px; display: block; }
+    .project-card h3 { font-size: 16px; font-weight: 700; color: var(--navy-deep); margin-bottom: 8px; line-height: 1.3; }
+    .project-card p { font-size: 13.5px; color: var(--steel); line-height: 1.65; margin-bottom: 14px; }
+    .project-card-price { font-size: 13px; font-weight: 700; color: var(--blue-accent); }
 
-    /* Single-plan managed services card */
-    .plan-card {
-      border: 1.5px solid var(--blue-accent);
-      border-radius: var(--radius-lg);
-      padding: 40px 40px 36px;
-      background: linear-gradient(160deg, #f5f9ff 0%, var(--white) 100%);
-      margin-bottom: 32px;
-    }
-    .plan-card-header {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: start;
-      margin-bottom: 28px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid #e0e8f5;
-    }
-    .plan-card-name {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--navy-deep);
-      letter-spacing: -0.02em;
-      margin-bottom: 6px;
-    }
-    .plan-card-tagline {
-      font-size: 15px;
-      color: var(--steel);
-      line-height: 1.6;
-    }
-    .plan-card-price {
-      text-align: right;
-      flex-shrink: 0;
-    }
-    .plan-card-price .price-amount {
-      font-size: 28px;
-      font-weight: 900;
-      color: var(--navy-deep);
-      letter-spacing: -0.02em;
-      white-space: nowrap;
-    }
-    .plan-card-price .price-label {
-      font-size: 12px;
-      color: var(--steel);
-      font-weight: 500;
-      margin-top: 2px;
-    }
-    .plan-features-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px 32px;
-      margin-bottom: 28px;
-    }
-    .plan-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 14px;
-      color: #3a5068;
-      line-height: 1.55;
-    }
-    .plan-feature::before {
-      content: '✓';
-      color: var(--blue-accent);
-      font-weight: 700;
-      font-size: 13px;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-    .plan-callout {
-      background: rgba(46,125,209,0.06);
-      border: 1px solid rgba(46,125,209,0.18);
-      border-radius: var(--radius);
-      padding: 16px 20px;
-      font-size: 13.5px;
-      color: var(--steel);
-      line-height: 1.7;
-      margin-bottom: 28px;
-      font-style: italic;
-    }
-    .plan-callout strong {
-      color: var(--navy-mid);
-      font-style: normal;
-    }
-    .plan-addons {
-      margin-bottom: 28px;
-    }
-    .plan-addons-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      color: var(--steel);
-      margin-bottom: 12px;
-    }
-    .plan-addon-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 7px 0;
-      border-bottom: 1px solid #eef1f7;
-      font-size: 13.5px;
-    }
-    .plan-addon-row:last-child {
-      border-bottom: none;
-    }
-    .plan-addon-label {
-      color: #3a5068;
-    }
-    .plan-addon-price {
-      color: var(--navy-mid);
-      font-weight: 600;
-      white-space: nowrap;
-      margin-left: 16px;
-    }
-    .tier-note {
-      text-align: center;
-      font-size: 13px;
-      color: var(--steel);
-      margin-top: 8px;
-      padding-top: 24px;
-      border-top: 1px solid #eef1f7;
-      font-style: italic;
-    }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .why-item { background: var(--off-white); border: 1px solid #e8edf5; border-radius: var(--radius-lg); padding: 32px 28px; transition: var(--transition); }
+    .why-item:hover { border-color: var(--blue-accent); box-shadow: 0 8px 32px rgba(46,125,209,0.08); transform: translateY(-3px); }
+    .why-icon { font-size: 30px; margin-bottom: 16px; display: block; }
+    .why-item h3 { font-size: 18px; font-weight: 700; color: var(--navy-deep); margin-bottom: 10px; }
+    .why-item p { font-size: 14.5px; color: var(--steel); line-height: 1.75; }
 
-    /* ══════════════════════════════════
-       SECURITY AUDITS
-    ══════════════════════════════════ */
-    #security-audits {
-      background: var(--off-white);
-      padding: 100px 0;
-    }
-    .tiers-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-    .tier-card {
-      border: 1.5px solid #e0e7ef;
-      border-radius: var(--radius-lg);
-      padding: 36px 32px 32px;
-      position: relative;
-      transition: var(--transition);
-      background: var(--white);
-    }
-    .tier-card:hover {
-      box-shadow: var(--shadow-heavy);
-      transform: translateY(-4px);
-    }
-    .tier-card.featured {
-      border-color: var(--blue-accent);
-      background: linear-gradient(160deg, #f5f9ff 0%, var(--white) 100%);
-    }
-    .tier-card.featured:hover {
-      box-shadow: 0 12px 56px rgba(46,125,209,0.18);
-    }
-    .tier-badge {
-      position: absolute;
-      top: -13px; right: 24px;
-      background: var(--blue-accent);
-      color: var(--white);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 50px;
-    }
-    .tier-name {
-      font-size: 21px;
-      font-weight: 800;
-      color: var(--navy-deep);
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
-    }
-    .tier-best-for {
-      font-size: 13px;
-      color: var(--blue-accent);
-      font-weight: 600;
-      margin-bottom: 24px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #eef1f7;
-    }
-    .tier-features {
-      list-style: none;
-      margin-bottom: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .tier-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 14px;
-      color: #3a5068;
-      line-height: 1.55;
-    }
-    .tier-features li::before {
-      content: '✓';
-      color: var(--blue-accent);
-      font-weight: 700;
-      font-size: 13px;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    /* ══════════════════════════════════
-       PROJECT SERVICES
-    ══════════════════════════════════ */
-    #project-services {
-      background: var(--white);
-      padding: 100px 0;
-    }
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 48px;
-    }
-    .project-card {
-      border: 1.5px solid #e0e7ef;
-      border-radius: var(--radius-lg);
-      padding: 28px 24px;
-      transition: var(--transition);
-    }
-    .project-card:hover {
-      border-color: var(--blue-accent);
-      box-shadow: var(--shadow-card);
-      transform: translateY(-3px);
-    }
-    .project-card-icon {
-      font-size: 26px;
-      margin-bottom: 14px;
-      display: block;
-    }
-    .project-card h3 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--navy-deep);
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-    .project-card p {
-      font-size: 13.5px;
-      color: var(--steel);
-      line-height: 1.65;
-      margin-bottom: 14px;
-    }
-    .project-card-price {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--blue-accent);
-    }
-
-    /* ══════════════════════════════════
-       CONSULTING
-    ══════════════════════════════════ */
-    #consulting {
-      background: var(--off-white);
-      padding: 100px 0;
-    }
-    .consulting-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
-      margin-top: 48px;
-    }
-    .rate-table {
-      background: var(--white);
-      border: 1px solid #e0e7ef;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-    .rate-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 14px 24px;
-      border-bottom: 1px solid #eef1f7;
-      font-size: 14px;
-    }
-    .rate-row:last-child {
-      border-bottom: none;
-    }
-    .rate-row-label {
-      color: #3a5068;
-      line-height: 1.4;
-    }
-    .rate-row-price {
-      font-weight: 700;
-      color: var(--navy-deep);
-      white-space: nowrap;
-      margin-left: 16px;
-    }
-    .consulting-note {
-      background: var(--white);
-      border: 1px solid #e0e7ef;
-      border-radius: var(--radius-lg);
-      padding: 28px 28px;
-    }
-    .consulting-note h3 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--navy-deep);
-      margin-bottom: 14px;
-    }
-    .consulting-note p {
-      font-size: 14px;
-      color: var(--steel);
-      line-height: 1.75;
-      margin-bottom: 12px;
-    }
-    .consulting-note p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ══════════════════════════════════
-       ROADMAP
-    ══════════════════════════════════ */
-    #roadmap {
-      background: var(--navy-deep);
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    #roadmap::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background:
-        radial-gradient(ellipse 60% 40% at 80% 30%, rgba(46,125,209,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 50% at 20% 70%, rgba(74,158,255,0.07) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .roadmap-header { margin-bottom: 52px; }
-    .roadmap-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      position: relative;
-      z-index: 1;
-      margin-bottom: 40px;
-    }
-    .roadmap-item {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius-lg);
-      padding: 28px 24px;
-      transition: var(--transition);
-    }
-    .roadmap-item:hover {
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(74,158,255,0.25);
-    }
-    .roadmap-item-icon {
-      font-size: 24px;
-      margin-bottom: 12px;
-      display: block;
-    }
-    .roadmap-item h3 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .roadmap-item p {
-      font-size: 13.5px;
-      color: var(--steel-light);
-      line-height: 1.7;
-    }
-    .roadmap-callout {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(74,158,255,0.20);
-      border-radius: var(--radius-lg);
-      padding: 24px 28px;
-      font-size: 14px;
-      color: var(--steel-light);
-      line-height: 1.75;
-      position: relative;
-      z-index: 1;
-      font-style: italic;
-    }
-    .roadmap-callout strong {
-      color: var(--blue-bright);
-      font-style: normal;
-    }
-
-    /* ══════════════════════════════════
-       WHY CHOOSE
-    ══════════════════════════════════ */
-    #why-choose {
-      background: var(--white);
-      padding: 100px 0;
-    }
-    .why-header { margin-bottom: 56px; }
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-    .why-item {
-      background: var(--off-white);
-      border: 1px solid #e8edf5;
-      border-radius: var(--radius-lg);
-      padding: 32px 28px;
-      transition: var(--transition);
-    }
-    .why-item:hover {
-      border-color: var(--blue-accent);
-      box-shadow: 0 8px 32px rgba(46,125,209,0.08);
-      transform: translateY(-3px);
-    }
-    .why-icon {
-      font-size: 30px;
-      margin-bottom: 16px;
-      display: block;
-    }
-    .why-item h3 {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--navy-deep);
-      margin-bottom: 10px;
-    }
-    .why-item p {
-      font-size: 14.5px;
-      color: var(--steel);
-      line-height: 1.75;
-    }
-
-    /* ══════════════════════════════════
-       CONTACT
-    ══════════════════════════════════ */
-    #contact {
-      background: var(--off-white);
-      padding: 100px 0;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: 64px;
-      align-items: start;
-    }
-    .contact-info h4 {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--navy-deep);
-      margin-bottom: 16px;
-      margin-top: 32px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 11px;
-    }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start; }
+    .contact-info h4 { font-size: 11px; font-weight: 700; color: var(--navy-deep); margin-bottom: 16px; margin-top: 32px; text-transform: uppercase; letter-spacing: 0.08em; }
     .contact-info h4:first-child { margin-top: 0; }
-    .contact-info p, .contact-info a {
-      font-size: 14.5px;
-      color: var(--steel);
-      line-height: 1.7;
-      text-decoration: none;
-      display: block;
-    }
+    .contact-info p, .contact-info a { font-size: 14.5px; color: var(--steel); line-height: 1.7; text-decoration: none; display: block; }
     .contact-info a:hover { color: var(--blue-accent); }
-    .contact-form {
-      background: var(--white);
-      border: 1px solid #e0e7ef;
-      border-radius: var(--radius-lg);
-      padding: 40px 36px;
-      box-shadow: var(--shadow-card);
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .form-group {
-      margin-bottom: 18px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--navy-deep);
-      margin-bottom: 7px;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 11px 14px;
-      border: 1.5px solid #dde3ef;
-      border-radius: 8px;
-      font-family: var(--font);
-      font-size: 14.5px;
-      color: #2a3f55;
-      background: var(--white);
-      transition: var(--transition);
-      outline: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--blue-accent);
-      box-shadow: 0 0 0 3px rgba(46,125,209,0.12);
-    }
+    .contact-form { background: var(--white); border: 1px solid #e0e7ef; border-radius: var(--radius-lg); padding: 40px 36px; box-shadow: var(--shadow-card); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--navy-deep); margin-bottom: 7px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 11px 14px; border: 1.5px solid #dde3ef; border-radius: 8px; font-family: var(--font); font-size: 14.5px; color: #2a3f55; background: var(--white); transition: var(--transition); outline: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue-accent); box-shadow: 0 0 0 3px rgba(46,125,209,0.12); }
     .form-group textarea { resize: vertical; min-height: 110px; }
-    .form-note {
-      font-size: 12.5px;
-      color: var(--steel);
-      margin-top: 12px;
-      text-align: center;
-      font-style: italic;
-    }
+    .form-note { font-size: 12.5px; color: var(--steel); margin-top: 12px; text-align: center; font-style: italic; }
 
-    /* ══════════════════════════════════
-       FOOTER
-    ══════════════════════════════════ */
-    footer {
-      background: var(--navy-deep);
-      padding: 64px 0 0;
-      border-top: 1px solid var(--border);
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 48px;
-      padding-bottom: 48px;
-    }
-    .footer-logo img {
-      max-height: 36px;
-      width: auto;
-      margin-bottom: 14px;
-      display: block;
-    }
-    .footer-tagline {
-      font-size: 13.5px;
-      color: var(--steel-light);
-      line-height: 1.7;
-    }
-    .footer-col h4 {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
-      margin-bottom: 18px;
-    }
-    .footer-col a, .footer-col p {
-      display: block;
-      font-size: 13.5px;
-      color: var(--steel-light);
-      text-decoration: none;
-      margin-bottom: 10px;
-      transition: var(--transition);
-      line-height: 1.6;
-    }
+    footer { background: var(--navy-deep); padding: 64px 0 0; border-top: 1px solid var(--border); }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; padding-bottom: 48px; }
+    .footer-logo img { max-height: 36px; width: auto; margin-bottom: 14px; display: block; }
+    .footer-tagline { font-size: 13.5px; color: var(--steel-light); line-height: 1.7; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 18px; }
+    .footer-col a, .footer-col p { display: block; font-size: 13.5px; color: var(--steel-light); text-decoration: none; margin-bottom: 10px; transition: var(--transition); line-height: 1.6; }
     .footer-col a:hover { color: var(--blue-bright); }
-    .footer-bar {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .footer-bar p {
-      font-size: 12.5px;
-      color: rgba(255,255,255,0.28);
-    }
-    .footer-bar-badges {
-      display: flex;
-      gap: 10px;
-    }
-    .footer-badge {
-      font-size: 11px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.3);
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 3px 10px;
-      border-radius: 50px;
-    }
+    .footer-bar { border-top: 1px solid var(--border); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .footer-bar p { font-size: 12.5px; color: rgba(255,255,255,0.28); }
+    .footer-bar-badges { display: flex; gap: 10px; }
+    .footer-badge { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.3); border: 1px solid rgba(255,255,255,0.12); padding: 3px 10px; border-radius: 50px; }
 
-    /* ══════════════════════════════════
-       RESPONSIVE
-    ══════════════════════════════════ */
-    @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .about-cards { grid-template-columns: 1fr 1fr; }
-      .tiers-grid { grid-template-columns: 1fr; }
-      .plan-card-header { grid-template-columns: 1fr; }
-      .plan-card-price { text-align: left; }
-      .plan-features-grid { grid-template-columns: 1fr; }
-      .project-grid { grid-template-columns: 1fr 1fr; }
-      .consulting-grid { grid-template-columns: 1fr; }
-      .roadmap-grid { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .about-cards { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .project-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bar { flex-direction: column; text-align: center; }
-      #problem, #security-baseline, #what-we-assess, #how-it-works, #remediation, #services, #ai-automation, #industries, #why-choose, #contact { padding: 72px 0; }
-      #insights { padding: 52px 0; }
-      .plan-card { padding: 28px 20px; }
-    }
-    @media (max-width: 480px) {
-      .hero-logo img { max-height: min(200px, 48vw); }
-      .hero-btns { flex-direction: column; }
-      .hero-btns .btn { justify-content: center; }
-      .tier-card, .contact-form { padding: 28px 20px; }
-    }
-
-    /* ══════════════════════════════════
-       NEW SECTION IDs — padding + bg
-    ══════════════════════════════════ */
     #problem           { padding: 80px 0; background: var(--off-white); }
     #security-baseline { padding: 80px 0; background: var(--navy-deep); }
     #what-we-assess    { padding: 80px 0; }
     #how-it-works      { padding: 80px 0; background: var(--off-white); }
     #scenarios         { padding: 80px 0; background: var(--white); }
     #remediation       { padding: 80px 0; background: var(--off-white); }
+    #services          { padding: 100px 0; background: var(--white); }
     #ai-automation     { padding: 80px 0; background: var(--navy-deep); }
     #industries        { padding: 80px 0; background: var(--off-white); }
+    #why-choose        { padding: 100px 0; background: var(--white); }
     #insights          { padding: 64px 0; background: var(--navy-mid); }
+    #contact           { padding: 100px 0; background: var(--off-white); }
 
-    /* ── PROBLEM ── */
-    .problem-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px 64px;
-      align-items: start;
-    }
-    .problem-list {
-      list-style: none;
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .problem-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 15px;
-      color: var(--steel);
-      line-height: 1.55;
-    }
-    .problem-list li::before {
-      content: "▸";
-      color: var(--blue-accent);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
+    .services-header { margin-bottom: 52px; }
 
-    /* ── BASELINE ── */
-    .baseline-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 40px 48px;
-      margin-top: 40px;
-    }
-    .baseline-deliverables {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px 48px;
-      margin-top: 16px;
-    }
-    .baseline-deliverable {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 15px;
-      color: var(--steel-light);
-      line-height: 1.5;
-    }
-    .baseline-deliverable::before {
-      content: "✓";
-      color: var(--blue-bright);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px 64px; align-items: start; }
+    .problem-list { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .problem-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--steel); line-height: 1.55; }
+    .problem-list li::before { content: "▸"; color: var(--blue-accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
-    /* ── WHAT WE ASSESS ── */
-    .assess-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 40px;
-    }
+    .baseline-card { background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px 48px; margin-top: 40px; }
+    .baseline-deliverables { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 48px; margin-top: 16px; }
+    .baseline-deliverable { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--steel-light); line-height: 1.5; }
+    .baseline-deliverable::before { content: "✓"; color: var(--blue-bright); font-weight: 700; flex-shrink: 0; }
 
-    /* ── HOW IT WORKS ── */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      margin-top: 48px;
-    }
-    .step-card {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .step-number {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--blue-accent);
-      color: var(--white);
-      font-size: 17px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .step-card h3 {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--navy-deep);
-      margin: 0;
-    }
-    .step-card p {
-      font-size: 15px;
-      color: var(--steel);
-      line-height: 1.65;
-      margin: 0;
-    }
+    .assess-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
 
-    /* ── SCENARIOS ── */
-    .scenario-tag {
-      display: inline-flex;
-      align-items: center;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 4px 11px;
-      border-radius: 50px;
-      margin-bottom: 14px;
-      border: 1px solid;
-    }
+    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 48px; }
+    .step-card { display: flex; flex-direction: column; gap: 12px; }
+    .step-number { width: 40px; height: 40px; border-radius: 50%; background: var(--blue-accent); color: var(--white); font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-card h3 { font-size: 17px; font-weight: 700; color: var(--navy-deep); margin: 0; }
+    .step-card p { font-size: 15px; color: var(--steel); line-height: 1.65; margin: 0; }
+
+    .scenario-tag { display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 11px; border-radius: 50px; margin-bottom: 14px; border: 1px solid; }
     .scenario-tag-identity { color: #185FA5; background: #E6F1FB; border-color: #B5D4F4; }
     .scenario-tag-ai       { color: #3C3489; background: #EEEDFE; border-color: #CECBF6; }
     .scenario-tag-backup   { color: #633806; background: #FAEEDA; border-color: #FAC775; }
     .scenario-tag-m365     { color: #085041; background: #E1F5EE; border-color: #9FE1CB; }
     .scenario-tag-network  { color: #27500A; background: #EAF3DE; border-color: #C0DD97; }
     .scenario-tag-stabilize{ color: #444441; background: #F1EFE8; border-color: #D3D1C7; }
-    .scenario-divider {
-      border: none;
-      border-top: 1px solid #eef1f7;
-      margin: 14px 0 12px;
-    }
-    .scenario-outcome-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      color: var(--steel);
-      margin-bottom: 6px;
-    }
-    .scenario-next {
-      font-size: 13px;
-      color: var(--steel);
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px solid #eef1f7;
-    }
+    .scenario-divider { border: none; border-top: 1px solid #eef1f7; margin: 14px 0 12px; }
+    .scenario-outcome-label { font-size: 10px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: var(--steel); margin-bottom: 6px; }
+    .scenario-next { font-size: 13px; color: var(--steel); margin-top: 12px; padding-top: 12px; border-top: 1px solid #eef1f7; }
     .scenario-next strong { color: var(--navy-mid); font-weight: 600; }
-    .scenario-cta-block {
-      background: var(--off-white);
-      border: 1px solid #e0e7ef;
-      border-radius: var(--radius-lg);
-      padding: 28px 32px;
-      margin-top: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .scenario-cta-text {
-      font-size: 15px;
-      color: var(--steel);
-      line-height: 1.7;
-      max-width: 640px;
-      margin: 0;
-    }
+    .scenario-cta-block { background: var(--off-white); border: 1px solid #e0e7ef; border-radius: var(--radius-lg); padding: 28px 32px; margin-top: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .scenario-cta-text { font-size: 15px; color: var(--steel); line-height: 1.7; max-width: 640px; margin: 0; }
 
-    /* ── AI & AUTOMATION ── */
-    .ai-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 40px;
-    }
+    .roadmap-header { margin-bottom: 52px; }
+    .roadmap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; position: relative; z-index: 1; margin-bottom: 40px; }
+    .roadmap-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: 28px 24px; transition: var(--transition); }
+    .roadmap-item:hover { background: rgba(255,255,255,0.07); border-color: rgba(74,158,255,0.25); }
+    .roadmap-item-icon { font-size: 24px; margin-bottom: 12px; display: block; }
+    .roadmap-item h3 { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .roadmap-item p { font-size: 13.5px; color: var(--steel-light); line-height: 1.7; }
+    .roadmap-callout { background: rgba(255,255,255,0.04); border: 1px solid rgba(74,158,255,0.20); border-radius: var(--radius-lg); padding: 24px 28px; font-size: 14px; color: var(--steel-light); line-height: 1.75; position: relative; z-index: 1; font-style: italic; }
+    .roadmap-callout strong { color: var(--blue-bright); font-style: normal; }
 
-    /* ── INDUSTRIES ── */
-    .industries-two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      margin-top: 40px;
-      align-items: start;
-    }
-    .industries-check-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 16px;
-    }
-    .industries-check-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 15px;
-      color: #2a3f55;
-      line-height: 1.5;
-    }
-    .industries-check-list li::before {
-      content: "✓";
-      color: var(--blue-accent);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .industries-not-fit {
-      margin-top: 40px;
-      padding: 20px 24px;
-      background: var(--white);
-      border-left: 3px solid var(--steel-light);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      font-size: 14px;
-      color: var(--steel);
-      line-height: 1.65;
-    }
+    .industries-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px; align-items: start; }
+    .industries-check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+    .industries-check-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: #2a3f55; line-height: 1.5; }
+    .industries-check-list li::before { content: "✓"; color: var(--blue-accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .industries-not-fit { margin-top: 40px; padding: 20px 24px; background: var(--white); border-left: 3px solid var(--steel-light); border-radius: 0 var(--radius) var(--radius) 0; font-size: 14px; color: var(--steel); line-height: 1.65; }
+    .industries-grid-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; margin-top: 16px; }
+    .industries-grid-list li { display: flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 500; color: #2a3f55; line-height: 1.4; }
+    .industries-grid-list li::before { content: "→"; color: var(--blue-accent); font-size: 13px; font-weight: 700; flex-shrink: 0; }
 
-    /* ── INSIGHTS ── */
-    .insights-inner {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto;
-    }
+    .insights-inner { text-align: center; max-width: 680px; margin: 0 auto; }
     .insights-inner .section-title { color: var(--white); }
-    .insights-inner .section-sub {
-      color: var(--steel-light);
-      max-width: 100%;
-      margin: 0 auto 32px;
-    }
+    .insights-inner .section-sub { color: var(--steel-light); max-width: 100%; margin: 0 auto 32px; }
 
-    /* ── INDUSTRIES GRID LIST ── */
-    .industries-grid-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px 32px;
-      margin-top: 16px;
-    }
-    .industries-grid-list li {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #2a3f55;
-      line-height: 1.4;
-    }
-    .industries-grid-list li::before {
-      content: "→";
-      color: var(--blue-accent);
-      font-size: 13px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
+    .why-header { margin-bottom: 56px; }
 
-    /* ── RESPONSIVE — new sections ── */
     @media (max-width: 900px) {
-      .problem-grid      { grid-template-columns: 1fr; gap: 32px; }
-      .assess-grid       { grid-template-columns: repeat(2, 1fr); }
-      .steps-grid        { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-      .ai-grid           { grid-template-columns: repeat(2, 1fr); }
-      .industries-two-col{ grid-template-columns: 1fr; gap: 32px; }
+      .problem-grid { grid-template-columns: 1fr; gap: 32px; }
+      .assess-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .roadmap-grid { grid-template-columns: 1fr; }
+      .plan-card-header { grid-template-columns: 1fr; }
+      .plan-card-price { text-align: left; }
+      .plan-features-grid { grid-template-columns: 1fr; }
+      .project-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .industries-two-col { grid-template-columns: 1fr; gap: 32px; }
       .baseline-deliverables { grid-template-columns: 1fr; }
       .scenario-cta-block { flex-direction: column; }
     }
     @media (max-width: 768px) {
-      .assess-grid          { grid-template-columns: 1fr; }
-      .steps-grid           { grid-template-columns: 1fr; }
-      .ai-grid              { grid-template-columns: 1fr; }
-      .baseline-card        { padding: 28px 24px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .form-row { grid-template-columns: 1fr; }
+      .project-grid { grid-template-columns: 1fr; }
+      .assess-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bar { flex-direction: column; text-align: center; }
+      .plan-card { padding: 28px 20px; }
+      .baseline-card { padding: 28px 24px; }
       .industries-grid-list { grid-template-columns: 1fr; gap: 10px; }
-      #scenarios            { padding: 72px 0; }
+      #problem, #security-baseline, #what-we-assess, #how-it-works, #remediation, #services, #ai-automation, #industries, #why-choose, #contact { padding: 72px 0; }
+      #insights { padding: 52px 0; }
+      #scenarios { padding: 72px 0; }
+    }
+    @media (max-width: 480px) {
+      .hero-logo img { max-height: min(200px, 48vw); }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { justify-content: center; }
+      .contact-form { padding: 28px 20px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══════════════ NAV ══════════════ -->
 <nav id="navbar">
   <div class="container">
     <div class="nav-inner">
-      <a href="#home" class="nav-logo">
-        <img src="assets/Logo.png" alt="BlueStrata LLC" />
-      </a>
+      <a href="#home" class="nav-logo"><img src="assets/Logo.png" alt="BlueStrata LLC" /></a>
       <ul class="nav-links">
         <li><a href="#security-baseline">Security Baseline</a></li>
         <li><a href="#scenarios">When to Call</a></li>
@@ -1389,15 +348,10 @@
   </div>
 </nav>
 
-<!-- ══════════════ HERO ══════════════ -->
 <section id="home">
   <div class="hero-bg">
     <svg viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-          <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#4a9eff" stroke-width="0.5"/>
-        </pattern>
-      </defs>
+      <defs><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M 48 0 L 0 0 0 48" fill="none" stroke="#4a9eff" stroke-width="0.5"/></pattern></defs>
       <rect width="100%" height="100%" fill="url(#grid)"/>
       <line x1="0" y1="200" x2="600" y2="800" stroke="#2e7dd1" stroke-width="0.8" opacity="0.5"/>
       <line x1="800" y1="0" x2="1400" y2="600" stroke="#2e7dd1" stroke-width="0.8" opacity="0.5"/>
@@ -1408,9 +362,7 @@
   </div>
   <div class="container">
     <div class="hero-content">
-      <div class="hero-logo fade-in">
-        <img src="assets/Logo.png" alt="BlueStrata LLC" />
-      </div>
+      <div class="hero-logo fade-in"><img src="assets/Logo.png" alt="BlueStrata LLC" /></div>
       <div class="hero-badge fade-in delay-1">Veteran-Owned · Aurora / Denver Metro</div>
       <h1 class="hero-headline fade-in delay-2">Cybersecurity, Microsoft 365 Hardening, and Managed IT for <em>Colorado SMBs</em></h1>
       <p class="hero-sub fade-in delay-3">BlueStrata helps small and midsize businesses reduce identity risk, endpoint exposure, network misconfiguration, and operational chaos — without enterprise overhead or an anonymous helpdesk shuffle.</p>
@@ -1419,24 +371,14 @@
         <a href="#security-baseline" class="btn btn-outline">Explore the Security Baseline</a>
       </div>
       <div class="hero-trust fade-in delay-4">
-        <div class="hero-trust-item">
-          <div class="hero-trust-icon">🎖️</div>
-          <span>Veteran-Owned</span>
-        </div>
-        <div class="hero-trust-item">
-          <div class="hero-trust-icon">🏢</div>
-          <span>Local to Aurora &amp; Denver</span>
-        </div>
-        <div class="hero-trust-item">
-          <div class="hero-trust-icon">🔒</div>
-          <span>Microsoft 365 &amp; Security Focused</span>
-        </div>
+        <div class="hero-trust-item"><div class="hero-trust-icon">🎖️</div><span>Veteran-Owned</span></div>
+        <div class="hero-trust-item"><div class="hero-trust-icon">🏢</div><span>Local to Aurora &amp; Denver</span></div>
+        <div class="hero-trust-item"><div class="hero-trust-icon">🔒</div><span>Microsoft 365 &amp; Security Focused</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ PROBLEM ══════════════ -->
 <section id="problem">
   <div class="container">
     <div class="problem-grid">
@@ -1462,7 +404,6 @@
   </div>
 </section>
 
-<!-- ══════════════ SECURITY BASELINE ══════════════ -->
 <section id="security-baseline">
   <div class="container">
     <div class="services-header fade-in">
@@ -1470,10 +411,8 @@
       <h2 class="section-title light">SMB Security &amp; Operations Baseline</h2>
       <p class="section-sub light">A fixed-scope assessment that gives business owners a clear, risk-rated view of what is exposed, what is misconfigured, and what should be fixed first.</p>
     </div>
-
     <div class="baseline-card fade-in">
       <p style="color:var(--steel-light);font-size:16px;line-height:1.75;margin-bottom:28px;">The Baseline covers the full operational attack surface for Colorado SMBs: identity, endpoints, email, network, backup, and operational processes — including an AI/automation readiness review. You get a deliverable you can act on, not a sales pitch dressed up as an audit.</p>
-
       <div style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:14px;">Deliverables</div>
       <div class="baseline-deliverables">
         <div class="baseline-deliverable">Executive summary</div>
@@ -1483,17 +422,14 @@
         <div class="baseline-deliverable">Optional remediation sprint proposal</div>
         <div class="baseline-deliverable">Optional managed services proposal</div>
       </div>
-
-      <div style="border-top:1px solid rgba(255,255,255,0.12);margin-top:32px;padding-top:20px;font-size:14px;color:var(--steel-light);line-height:1.75;text-align:left;">
+      <div style="border-top:1px solid rgba(255,255,255,0.12);margin-top:32px;padding-top:20px;font-size:14px;color:var(--steel-light);line-height:1.75;">
         The Baseline is a paid, fixed-scope engagement. Scope and pricing are confirmed after the Discovery Call.
       </div>
-
       <a href="#contact" class="btn btn-primary" style="margin-top:32px;display:inline-flex;">Book a Discovery Call</a>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ WHAT WE ASSESS ══════════════ -->
 <section id="what-we-assess">
   <div class="container">
     <div class="fade-in">
@@ -1501,53 +437,19 @@
       <h2 class="section-title">What the Baseline Covers</h2>
       <p class="section-sub">Every Baseline engagement reviews these eight areas against practical security and operational standards.</p>
     </div>
-
     <div class="assess-grid">
-      <div class="project-card fade-in">
-        <span class="project-card-icon">🔐</span>
-        <h3>Identity &amp; Access</h3>
-        <p>Microsoft 365 / Entra ID, MFA enrollment, Conditional Access, admin roles, and privileged access review.</p>
-      </div>
-      <div class="project-card fade-in delay-1">
-        <span class="project-card-icon">💻</span>
-        <h3>Endpoint Posture</h3>
-        <p>Device management, Intune / MDM readiness, EDR coverage, local admin accounts, and patch status.</p>
-      </div>
-      <div class="project-card fade-in delay-2">
-        <span class="project-card-icon">📧</span>
-        <h3>Email Security</h3>
-        <p>SPF, DKIM, DMARC, anti-phishing policies, mail forwarding rules, delegate permissions, and transport rules.</p>
-      </div>
-      <div class="project-card fade-in delay-3">
-        <span class="project-card-icon">🌐</span>
-        <h3>Network &amp; VPN</h3>
-        <p>Firewall configuration, VPN setup, Wi-Fi security, and basic network segmentation posture.</p>
-      </div>
-      <div class="project-card fade-in">
-        <span class="project-card-icon">💾</span>
-        <h3>Backup &amp; Recovery</h3>
-        <p>Backup strategy, recovery testing, RTO/RPO awareness, and Microsoft 365 data protection posture.</p>
-      </div>
-      <div class="project-card fade-in delay-1">
-        <span class="project-card-icon">🔄</span>
-        <h3>Onboarding &amp; Offboarding</h3>
-        <p>User lifecycle controls, access removal procedures, and stale account review.</p>
-      </div>
-      <div class="project-card fade-in delay-2">
-        <span class="project-card-icon">📋</span>
-        <h3>Documentation &amp; Process</h3>
-        <p>Operational SOPs, asset documentation, vendor inventory, and known process gaps.</p>
-      </div>
-      <div class="project-card fade-in delay-3">
-        <span class="project-card-icon">🤖</span>
-        <h3>AI &amp; Automation Readiness</h3>
-        <p>Shadow AI exposure, OAuth consent posture, automation risk, and readiness for safe workflow automation.</p>
-      </div>
+      <div class="project-card fade-in"><span class="project-card-icon">🔐</span><h3>Identity &amp; Access</h3><p>Microsoft 365 / Entra ID, MFA enrollment, Conditional Access, admin roles, and privileged access review.</p></div>
+      <div class="project-card fade-in delay-1"><span class="project-card-icon">💻</span><h3>Endpoint Posture</h3><p>Device management, Intune / MDM readiness, EDR coverage, local admin accounts, and patch status.</p></div>
+      <div class="project-card fade-in delay-2"><span class="project-card-icon">📧</span><h3>Email Security</h3><p>SPF, DKIM, DMARC, anti-phishing policies, mail forwarding rules, delegate permissions, and transport rules.</p></div>
+      <div class="project-card fade-in delay-3"><span class="project-card-icon">🌐</span><h3>Network &amp; VPN</h3><p>Firewall configuration, VPN setup, Wi-Fi security, and basic network segmentation posture.</p></div>
+      <div class="project-card fade-in"><span class="project-card-icon">💾</span><h3>Backup &amp; Recovery</h3><p>Backup strategy, recovery testing, RTO/RPO awareness, and Microsoft 365 data protection posture.</p></div>
+      <div class="project-card fade-in delay-1"><span class="project-card-icon">🔄</span><h3>Onboarding &amp; Offboarding</h3><p>User lifecycle controls, access removal procedures, and stale account review.</p></div>
+      <div class="project-card fade-in delay-2"><span class="project-card-icon">📋</span><h3>Documentation &amp; Process</h3><p>Operational SOPs, asset documentation, vendor inventory, and known process gaps.</p></div>
+      <div class="project-card fade-in delay-3"><span class="project-card-icon">🤖</span><h3>AI &amp; Automation Readiness</h3><p>Shadow AI exposure, OAuth consent posture, automation risk, and readiness for safe workflow automation.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ HOW IT WORKS ══════════════ -->
 <section id="how-it-works">
   <div class="container">
     <div class="fade-in">
@@ -1555,33 +457,15 @@
       <h2 class="section-title">How It Works</h2>
       <p class="section-sub">Four steps from first conversation to an environment under active management.</p>
     </div>
-
     <div class="steps-grid">
-      <div class="step-card fade-in">
-        <div class="step-number">1</div>
-        <h3>Discovery Call</h3>
-        <p>We discuss your environment, pain points, and business risk. No credentials required. You leave with a clear next step.</p>
-      </div>
-      <div class="step-card fade-in delay-1">
-        <div class="step-number">2</div>
-        <h3>Baseline Assessment</h3>
-        <p>We review identity, endpoints, email, network, backup, and operational controls against practical security standards.</p>
-      </div>
-      <div class="step-card fade-in delay-2">
-        <div class="step-number">3</div>
-        <h3>Report &amp; Roadmap</h3>
-        <p>You receive risk-rated findings, a prioritized remediation roadmap, and an executive summary written for business owners.</p>
-      </div>
-      <div class="step-card fade-in delay-3">
-        <div class="step-number">4</div>
-        <h3>Fix or Manage</h3>
-        <p>BlueStrata can execute targeted remediation sprints or provide ongoing managed IT and security support.</p>
-      </div>
+      <div class="step-card fade-in"><div class="step-number">1</div><h3>Discovery Call</h3><p>We discuss your environment, pain points, and business risk. No credentials required. You leave with a clear next step.</p></div>
+      <div class="step-card fade-in delay-1"><div class="step-number">2</div><h3>Baseline Assessment</h3><p>We review identity, endpoints, email, network, backup, and operational controls against practical security standards.</p></div>
+      <div class="step-card fade-in delay-2"><div class="step-number">3</div><h3>Report &amp; Roadmap</h3><p>You receive risk-rated findings, a prioritized remediation roadmap, and an executive summary written for business owners.</p></div>
+      <div class="step-card fade-in delay-3"><div class="step-number">4</div><h3>Fix or Manage</h3><p>BlueStrata can execute targeted remediation sprints or provide ongoing managed IT and security support.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ WHEN TO CALL BLUESTRATA ══════════════ -->
 <section id="scenarios">
   <div class="container">
     <div class="fade-in">
@@ -1591,7 +475,6 @@
     </div>
 
     <div class="project-grid" style="margin-top:48px;">
-
       <div class="project-card fade-in">
         <div class="scenario-tag scenario-tag-identity">Identity &amp; access</div>
         <h3>"Former employees may still have access to our systems."</h3>
@@ -1601,7 +484,6 @@
         <p>We audit active accounts, admin roles, MFA coverage, mail forwarding rules, external file sharing, and third-party app permissions. We clear the urgent exposures and give you a prioritized roadmap for the rest.</p>
         <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline</div>
       </div>
-
       <div class="project-card fade-in delay-1">
         <div class="scenario-tag scenario-tag-ai">AI governance</div>
         <h3>"Staff are using AI tools, and we have no policy or guardrails."</h3>
@@ -1611,7 +493,6 @@
         <p>We assess current AI usage, review Microsoft 365 data exposure, identify risky workflows, draft an acceptable-use policy, and build a 30/60/90-day AI governance roadmap with approved tool categories.</p>
         <div class="scenario-next"><strong>Best next step:</strong> AI &amp; Automation Assessment or Security &amp; Operations Baseline</div>
       </div>
-
       <div class="project-card fade-in delay-2">
         <div class="scenario-tag scenario-tag-backup">Backup &amp; recovery</div>
         <h3>"Our backups say they're working, but nobody has tested a restore."</h3>
@@ -1621,7 +502,6 @@
         <p>We verify backup jobs, perform a controlled restore test, document recovery credentials, identify gaps in Microsoft 365 backup coverage, define your recovery expectations, and produce a written gap report.</p>
         <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline, then Backup &amp; DR Cleanup</div>
       </div>
-
       <div class="project-card fade-in">
         <div class="scenario-tag scenario-tag-m365">Microsoft 365</div>
         <h3>"Microsoft 365 has turned into permission chaos."</h3>
@@ -1631,7 +511,6 @@
         <p>We harden Microsoft 365 and Entra ID — cleaning up Conditional Access, reviewing OAuth app consent, tightening external sharing, and reviewing DLP and audit logging so you have visibility and control again.</p>
         <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline, then M365 / Entra ID Hardening</div>
       </div>
-
       <div class="project-card fade-in delay-1">
         <div class="scenario-tag scenario-tag-network">Network &amp; devices</div>
         <h3>"Wi-Fi, VPN, printers, and shared devices keep interrupting work."</h3>
@@ -1641,7 +520,6 @@
         <p>We document the network, review firewall and Wi-Fi configuration, inventory devices, and identify the specific sources of friction — then provide a prioritized fix plan that actually resolves the problems.</p>
         <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline, then Firewall, VPN &amp; Wi-Fi Review</div>
       </div>
-
       <div class="project-card fade-in delay-2">
         <div class="scenario-tag scenario-tag-stabilize">IT stabilization</div>
         <h3>"We've outgrown the person who used to handle our IT."</h3>
@@ -1651,21 +529,20 @@
         <p>We inventory users, devices, network gear, Microsoft 365, admin accounts, vendors, and critical systems. We close the most urgent gaps and produce a 90-day stabilization roadmap — moving the business from tribal knowledge to a documented, supportable environment.</p>
         <div class="scenario-next"><strong>Best next step:</strong> Security &amp; Operations Baseline, then managed support</div>
       </div>
-
     </div>
 
+    <!-- CHANGE 1: Updated CTA block with assessment link -->
     <div class="scenario-cta-block fade-in">
-      <p class="scenario-cta-text">Not sure which situation fits? Most clients start with a free external security assessment or a 30-minute discovery call. BlueStrata will help you determine the right next step — whether that's a Security &amp; Operations Baseline, a focused remediation sprint, managed support, or an AI governance review.</p>
+      <p class="scenario-cta-text">Not sure which situation fits? Start with the IT Maturity Assessment — 10 questions, instant result, no commitment. Or book a 30-minute discovery call and BlueStrata will help you determine the right next step.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0;">
-        <a href="#contact" class="btn btn-primary">Book a Discovery Call</a>
-        <a href="#contact" class="btn btn-ghost">Free External Assessment</a>
+        <a href="assessment.html" class="btn btn-primary">Take the IT Assessment</a>
+        <a href="#contact" class="btn btn-ghost">Book a Discovery Call</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════ REMEDIATION SPRINTS ══════════════ -->
 <section id="remediation">
   <div class="container">
     <div class="fade-in">
@@ -1673,67 +550,20 @@
       <h2 class="section-title">Remediation Sprints</h2>
       <p class="section-sub">Project-based fixes executed after the Baseline. Each sprint is fixed-scope with defined deliverables — no ongoing retainer required.</p>
     </div>
-
     <div class="project-grid">
-      <div class="project-card fade-in">
-        <span class="project-card-icon">🔐</span>
-        <h3>M365 / Entra ID Hardening</h3>
-        <p>Full security configuration of your Microsoft 365 tenant — MFA, Conditional Access, audit logging, DLP, and external sharing controls.</p>
-        <div class="project-card-price">Scoped after assessment</div>
-      </div>
-      <div class="project-card fade-in delay-1">
-        <span class="project-card-icon">🛡️</span>
-        <h3>Conditional Access &amp; MFA Cleanup</h3>
-        <p>Review and rebuild Conditional Access policies, eliminate legacy auth, and enforce phishing-resistant MFA across your tenant.</p>
-        <div class="project-card-price">Scoped after assessment</div>
-      </div>
-      <div class="project-card fade-in delay-2">
-        <span class="project-card-icon">📧</span>
-        <h3>Email Security Hardening</h3>
-        <p>SPF, DKIM, DMARC configuration, anti-phishing policy review, and mail flow security cleanup.</p>
-        <div class="project-card-price">Scoped after assessment</div>
-      </div>
-      <div class="project-card fade-in">
-        <span class="project-card-icon">💻</span>
-        <h3>Intune / Endpoint Hardening</h3>
-        <p>Enroll and configure devices in Intune, enforce compliance policies, and deploy EDR to unmanaged endpoints.</p>
-        <div class="project-card-price">Scoped after assessment</div>
-      </div>
-      <div class="project-card fade-in delay-1">
-        <span class="project-card-icon">💾</span>
-        <h3>Backup &amp; DR Cleanup</h3>
-        <p>Design and implement a backup strategy with tested recovery procedures and documented RTO/RPO targets.</p>
-        <div class="project-card-price">Scoped after assessment</div>
-      </div>
-      <div class="project-card fade-in delay-2">
-        <span class="project-card-icon">🌐</span>
-        <h3>Firewall, VPN &amp; Wi-Fi Review</h3>
-        <p>Firewall rule review, VPN hardening, Wi-Fi segmentation, and network configuration cleanup.</p>
-        <div class="project-card-price">Scoped after assessment</div>
-      </div>
-      <div class="project-card fade-in">
-        <span class="project-card-icon">🚪</span>
-        <h3>Offboarding &amp; Access Control</h3>
-        <p>Stale account cleanup, privilege reduction, offboarding process documentation, and access control review.</p>
-        <div class="project-card-price">Scoped after assessment</div>
-      </div>
-      <div class="project-card fade-in delay-1">
-        <span class="project-card-icon">📋</span>
-        <h3>Security Documentation &amp; SOPs</h3>
-        <p>Build or clean up SOPs, runbooks, and technical documentation for repeatable IT operations.</p>
-        <div class="project-card-price">Scoped after assessment</div>
-      </div>
-      <div class="project-card fade-in delay-2">
-        <span class="project-card-icon">🔧</span>
-        <h3>Something Else?</h3>
-        <p>Not every problem fits a standard sprint. Reach out and we'll scope it after a discovery conversation.</p>
-        <div class="project-card-price">Custom scope</div>
-      </div>
+      <div class="project-card fade-in"><span class="project-card-icon">🔐</span><h3>M365 / Entra ID Hardening</h3><p>Full security configuration of your Microsoft 365 tenant — MFA, Conditional Access, audit logging, DLP, and external sharing controls.</p><div class="project-card-price">Scoped after assessment</div></div>
+      <div class="project-card fade-in delay-1"><span class="project-card-icon">🛡️</span><h3>Conditional Access &amp; MFA Cleanup</h3><p>Review and rebuild Conditional Access policies, eliminate legacy auth, and enforce phishing-resistant MFA across your tenant.</p><div class="project-card-price">Scoped after assessment</div></div>
+      <div class="project-card fade-in delay-2"><span class="project-card-icon">📧</span><h3>Email Security Hardening</h3><p>SPF, DKIM, DMARC configuration, anti-phishing policy review, and mail flow security cleanup.</p><div class="project-card-price">Scoped after assessment</div></div>
+      <div class="project-card fade-in"><span class="project-card-icon">💻</span><h3>Intune / Endpoint Hardening</h3><p>Enroll and configure devices in Intune, enforce compliance policies, and deploy EDR to unmanaged endpoints.</p><div class="project-card-price">Scoped after assessment</div></div>
+      <div class="project-card fade-in delay-1"><span class="project-card-icon">💾</span><h3>Backup &amp; DR Cleanup</h3><p>Design and implement a backup strategy with tested recovery procedures and documented RTO/RPO targets.</p><div class="project-card-price">Scoped after assessment</div></div>
+      <div class="project-card fade-in delay-2"><span class="project-card-icon">🌐</span><h3>Firewall, VPN &amp; Wi-Fi Review</h3><p>Firewall rule review, VPN hardening, Wi-Fi segmentation, and network configuration cleanup.</p><div class="project-card-price">Scoped after assessment</div></div>
+      <div class="project-card fade-in"><span class="project-card-icon">🚪</span><h3>Offboarding &amp; Access Control</h3><p>Stale account cleanup, privilege reduction, offboarding process documentation, and access control review.</p><div class="project-card-price">Scoped after assessment</div></div>
+      <div class="project-card fade-in delay-1"><span class="project-card-icon">📋</span><h3>Security Documentation &amp; SOPs</h3><p>Build or clean up SOPs, runbooks, and technical documentation for repeatable IT operations.</p><div class="project-card-price">Scoped after assessment</div></div>
+      <div class="project-card fade-in delay-2"><span class="project-card-icon">🔧</span><h3>Something Else?</h3><p>Not every problem fits a standard sprint. Reach out and we'll scope it after a discovery conversation.</p><div class="project-card-price">Custom scope</div></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ MANAGED SERVICES ══════════════ -->
 <section id="services">
   <div class="container">
     <div class="services-header fade-in">
@@ -1741,7 +571,6 @@
       <h2 class="section-title">Managed IT &amp; Security Retainers</h2>
       <p class="section-sub">Security-focused IT management with senior-level oversight — for businesses that need consistent protection, support, and accountability without hiring full-time staff.</p>
     </div>
-
     <div class="plan-card fade-in">
       <div class="plan-card-header">
         <div>
@@ -1754,7 +583,6 @@
           <div class="price-label">$1,500/mo minimum</div>
         </div>
       </div>
-
       <div class="plan-features-grid">
         <div class="plan-feature">Endpoint monitoring, patching, and management via professional RMM</div>
         <div class="plan-feature">Enterprise-grade endpoint detection and response (EDR) on every device</div>
@@ -1765,47 +593,24 @@
         <div class="plan-feature">Monthly summary covering patch status, incidents, and actions taken</div>
         <div class="plan-feature">Up to 5 shared network devices included at no extra charge</div>
       </div>
-
       <div class="plan-callout">
         <strong>What this is — and what it isn't.</strong> This is proactive, security-focused IT management. Your devices are patched, protected, and monitored. Your users are set up correctly and locked down. When something breaks, you call one person who already knows your environment. Business-hours remote support is included for covered users and supported systems, with scope defined in the service agreement.
       </div>
-
       <div class="plan-addons">
         <div class="plan-addons-title">Additional Pricing</div>
-        <div class="plan-addon-row">
-          <span class="plan-addon-label">Additional devices beyond 2 per user</span>
-          <span class="plan-addon-price">$50/device/mo</span>
-        </div>
-        <div class="plan-addon-row">
-          <span class="plan-addon-label">Shared devices (kiosks, conference PCs)</span>
-          <span class="plan-addon-price">$50–$75/device/mo</span>
-        </div>
-        <div class="plan-addon-row">
-          <span class="plan-addon-label">Additional network devices beyond 5 included</span>
-          <span class="plan-addon-price">$25–$50/device/mo</span>
-        </div>
-        <div class="plan-addon-row">
-          <span class="plan-addon-label">Server management (standard workloads)</span>
-          <span class="plan-addon-price">$150–$250/server/mo</span>
-        </div>
-        <div class="plan-addon-row">
-          <span class="plan-addon-label">Server management (business-critical)</span>
-          <span class="plan-addon-price">$250–$400/server/mo</span>
-        </div>
-        <div class="plan-addon-row">
-          <span class="plan-addon-label">After-hours emergency support</span>
-          <span class="plan-addon-price">$200–$300/hr</span>
-        </div>
+        <div class="plan-addon-row"><span class="plan-addon-label">Additional devices beyond 2 per user</span><span class="plan-addon-price">$50/device/mo</span></div>
+        <div class="plan-addon-row"><span class="plan-addon-label">Shared devices (kiosks, conference PCs)</span><span class="plan-addon-price">$50–$75/device/mo</span></div>
+        <div class="plan-addon-row"><span class="plan-addon-label">Additional network devices beyond 5 included</span><span class="plan-addon-price">$25–$50/device/mo</span></div>
+        <div class="plan-addon-row"><span class="plan-addon-label">Server management (standard workloads)</span><span class="plan-addon-price">$150–$250/server/mo</span></div>
+        <div class="plan-addon-row"><span class="plan-addon-label">Server management (business-critical)</span><span class="plan-addon-price">$250–$400/server/mo</span></div>
+        <div class="plan-addon-row"><span class="plan-addon-label">After-hours emergency support</span><span class="plan-addon-price">$200–$300/hr</span></div>
       </div>
-
       <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:15px;">Book a Discovery Call</a>
     </div>
-
     <p class="tier-note fade-in">Month-to-month and annual agreements available. Scope and coverage defined in the service agreement.</p>
   </div>
 </section>
 
-<!-- ══════════════ AI & AUTOMATION ══════════════ -->
 <section id="ai-automation">
   <div class="container">
     <div class="roadmap-header fade-in">
@@ -1813,47 +618,20 @@
       <h2 class="section-title light">AI &amp; Automation for SMB Operations</h2>
       <p class="section-sub light">BlueStrata helps businesses identify where automation and AI agents can safely reduce repetitive work — without exposing sensitive data or bypassing human approval. The focus is practical: intake, documentation, onboarding, offboarding, reporting, SOP generation, and internal knowledge retrieval.</p>
     </div>
-
     <div class="roadmap-grid">
-      <div class="roadmap-item fade-in">
-        <span class="roadmap-item-icon">🤖</span>
-        <h3>AI Workflow Readiness Assessment</h3>
-        <p>Evaluate where AI and automation can safely reduce operational overhead, and identify data exposure or access control gaps before deployment.</p>
-      </div>
-      <div class="roadmap-item fade-in delay-1">
-        <span class="roadmap-item-icon">📄</span>
-        <h3>Internal Documentation Assistant</h3>
-        <p>AI-assisted knowledge retrieval and documentation tools for internal teams — scoped with access controls and data boundaries.</p>
-      </div>
-      <div class="roadmap-item fade-in delay-2">
-        <span class="roadmap-item-icon">📥</span>
-        <h3>Ticket Intake &amp; Scoping Assistant</h3>
-        <p>Structured intake workflows that capture issue context, categorize requests, and route work without manual triage overhead.</p>
-      </div>
-      <div class="roadmap-item fade-in delay-3">
-        <span class="roadmap-item-icon">📝</span>
-        <h3>SOP Generation &amp; Reporting</h3>
-        <p>Automated SOP drafting, change documentation, and executive report generation from operational data.</p>
-      </div>
-      <div class="roadmap-item fade-in">
-        <span class="roadmap-item-icon">🔒</span>
-        <h3>AI Governance &amp; Access Control Review</h3>
-        <p>Audit OAuth consent posture, shadow AI usage, and permission scope for AI tools already operating in your environment.</p>
-      </div>
-      <div class="roadmap-item fade-in delay-1">
-        <span class="roadmap-item-icon">⚙️</span>
-        <h3>Secure Business Process Automation</h3>
-        <p>Design and implement automations for onboarding, offboarding, approvals, and reporting — with human approval gates and audit trails.</p>
-      </div>
+      <div class="roadmap-item fade-in"><span class="roadmap-item-icon">🤖</span><h3>AI Workflow Readiness Assessment</h3><p>Evaluate where AI and automation can safely reduce operational overhead, and identify data exposure or access control gaps before deployment.</p></div>
+      <div class="roadmap-item fade-in delay-1"><span class="roadmap-item-icon">📄</span><h3>Internal Documentation Assistant</h3><p>AI-assisted knowledge retrieval and documentation tools for internal teams — scoped with access controls and data boundaries.</p></div>
+      <div class="roadmap-item fade-in delay-2"><span class="roadmap-item-icon">📥</span><h3>Ticket Intake &amp; Scoping Assistant</h3><p>Structured intake workflows that capture issue context, categorize requests, and route work without manual triage overhead.</p></div>
+      <div class="roadmap-item fade-in delay-3"><span class="roadmap-item-icon">📝</span><h3>SOP Generation &amp; Reporting</h3><p>Automated SOP drafting, change documentation, and executive report generation from operational data.</p></div>
+      <div class="roadmap-item fade-in"><span class="roadmap-item-icon">🔒</span><h3>AI Governance &amp; Access Control Review</h3><p>Audit OAuth consent posture, shadow AI usage, and permission scope for AI tools already operating in your environment.</p></div>
+      <div class="roadmap-item fade-in delay-1"><span class="roadmap-item-icon">⚙️</span><h3>Secure Business Process Automation</h3><p>Design and implement automations for onboarding, offboarding, approvals, and reporting — with human approval gates and audit trails.</p></div>
     </div>
-
     <div class="roadmap-callout fade-in">
       <strong>Every implementation is scoped with access controls, data boundaries, and human approval gates.</strong> BlueStrata does not deploy AI that operates without guardrails, exposes sensitive business data to unreviewed third-party services, or bypasses human oversight for consequential actions.
     </div>
   </div>
 </section>
 
-<!-- ══════════════ INDUSTRIES ══════════════ -->
 <section id="industries">
   <div class="container">
     <div class="fade-in">
@@ -1861,7 +639,6 @@
       <h2 class="section-title">Built for SMBs That Need Serious IT Without Enterprise Overhead</h2>
       <p class="section-sub">BlueStrata is designed for businesses that have real operational and security risk but no full-time security team to address it.</p>
     </div>
-
     <div class="industries-two-col">
       <div class="fade-in delay-1">
         <h3 style="font-size:16px;font-weight:700;color:var(--navy-deep);margin-bottom:4px;">Best Fit</h3>
@@ -1887,14 +664,12 @@
         </ul>
       </div>
     </div>
-
     <div class="industries-not-fit fade-in">
       BlueStrata is not built for businesses looking for the cheapest possible IT, or for environments that want security controls disabled without accepting documented ownership of the risk.
     </div>
   </div>
 </section>
 
-<!-- ══════════════ WHY CHOOSE ══════════════ -->
 <section id="why-choose">
   <div class="container">
     <div class="why-header fade-in">
@@ -1903,31 +678,14 @@
       <p class="section-sub">Small businesses usually do not need another vendor. They need a responsible operator who can see risk clearly, communicate plainly, and bring order to an environment that has been running on shortcuts.</p>
     </div>
     <div class="why-grid">
-      <div class="why-item fade-in">
-        <span class="why-icon">🎯</span>
-        <h3>No Anonymous Helpdesk Shuffle</h3>
-        <p>Every engagement is founder-led, documented, and handled with senior-level oversight. You are not handed off to a random queue or left waiting on someone who has never seen your environment.</p>
-      </div>
-      <div class="why-item fade-in delay-1">
-        <span class="why-icon">🏢</span>
-        <h3>Built for Colorado SMBs</h3>
-        <p>BlueStrata is designed for Colorado businesses that have outgrown ad hoc support and need a practical, security-first operator who can work with what they already have.</p>
-      </div>
-      <div class="why-item fade-in delay-2">
-        <span class="why-icon">🔒</span>
-        <h3>Microsoft 365 and Identity Focus</h3>
-        <p>Most small-business risk now lives in email, identity, devices, and access. That is where we focus first so you get the most meaningful reduction in exposure.</p>
-      </div>
-      <div class="why-item fade-in delay-3">
-        <span class="why-icon">📬</span>
-        <h3>Clear Communication, Not Black Box IT</h3>
-        <p>You get direct updates, documented findings, and a clear next step. No vague jargon, no surprise bills, and no disappearing act after the initial sale.</p>
-      </div>
+      <div class="why-item fade-in"><span class="why-icon">🎯</span><h3>No Anonymous Helpdesk Shuffle</h3><p>Every engagement is founder-led, documented, and handled with senior-level oversight. You are not handed off to a random queue or left waiting on someone who has never seen your environment.</p></div>
+      <div class="why-item fade-in delay-1"><span class="why-icon">🏢</span><h3>Built for Colorado SMBs</h3><p>BlueStrata is designed for Colorado businesses that have outgrown ad hoc support and need a practical, security-first operator who can work with what they already have.</p></div>
+      <div class="why-item fade-in delay-2"><span class="why-icon">🔒</span><h3>Microsoft 365 and Identity Focus</h3><p>Most small-business risk now lives in email, identity, devices, and access. That is where we focus first so you get the most meaningful reduction in exposure.</p></div>
+      <div class="why-item fade-in delay-3"><span class="why-icon">📬</span><h3>Clear Communication, Not Black Box IT</h3><p>You get direct updates, documented findings, and a clear next step. No vague jargon, no surprise bills, and no disappearing act after the initial sale.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ INSIGHTS ══════════════ -->
 <section id="insights">
   <div class="container">
     <div class="insights-inner fade-in">
@@ -1939,7 +697,6 @@
   </div>
 </section>
 
-<!-- ══════════════ CONTACT ══════════════ -->
 <section id="contact">
   <div class="container">
     <div class="contact-grid">
@@ -1947,44 +704,27 @@
         <span class="section-label">Contact</span>
         <h2 class="section-title" style="margin-bottom:14px;">Book a Discovery Call</h2>
         <p class="section-sub" style="margin-bottom:36px;">Tell me about your environment, the biggest gaps you know about, and what has been keeping you from addressing them. You will leave with a clear next step — whether that is the Security Baseline, a remediation sprint, or ongoing managed support.</p>
-
         <div class="contact-info">
           <h4>Best Fit</h4>
           <p>10–75 user businesses in Colorado</p>
-
           <h4>Email</h4>
           <a href="mailto:Patrick.Welsh@BlueStrata.io">Patrick.Welsh@BlueStrata.io</a>
           <p style="font-size:13px;color:var(--steel);line-height:1.7;margin-top:6px;">Prefer email? Send a message directly to <a href="mailto:Patrick.Welsh@BlueStrata.io" style="color:var(--blue-accent);">Patrick.Welsh@BlueStrata.io</a> with your company name, user count, current IT/security concern, and whether you are looking for a Security Baseline, remediation sprint, managed support, or AI automation review.</p>
-
           <h4>Response Time</h4>
           <p>Replies within one business day</p>
-
           <h4>Insights</h4>
           <a href="https://defaultgateway.substack.com" target="_blank" rel="noopener">The Default Gateway — practical IT and security insights</a>
         </div>
       </div>
-
       <div class="contact-form fade-in delay-1">
         <form action="https://formspree.io/f/mvzlgoqd" method="POST">
           <div class="form-row">
-            <div class="form-group">
-              <label for="name">Name <span style="color:#e05;">&ast;</span></label>
-              <input type="text" id="name" name="Name" required placeholder="Your name" />
-            </div>
-            <div class="form-group">
-              <label for="company">Company Name <span style="color:#e05;">&ast;</span></label>
-              <input type="text" id="company" name="Company" required placeholder="Your company" />
-            </div>
+            <div class="form-group"><label for="name">Name <span style="color:#e05;">&ast;</span></label><input type="text" id="name" name="Name" required placeholder="Your name" /></div>
+            <div class="form-group"><label for="company">Company Name <span style="color:#e05;">&ast;</span></label><input type="text" id="company" name="Company" required placeholder="Your company" /></div>
           </div>
           <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email <span style="color:#e05;">&ast;</span></label>
-              <input type="email" id="email" name="Email" required placeholder="you@company.com" />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone <span style="color:#999;font-weight:400;">(optional)</span></label>
-              <input type="tel" id="phone" name="Phone" placeholder="(720) 555-0000" />
-            </div>
+            <div class="form-group"><label for="email">Email <span style="color:#e05;">&ast;</span></label><input type="email" id="email" name="Email" required placeholder="you@company.com" /></div>
+            <div class="form-group"><label for="phone">Phone <span style="color:#999;font-weight:400;">(optional)</span></label><input type="tel" id="phone" name="Phone" placeholder="(720) 555-0000" /></div>
           </div>
           <div class="form-group">
             <label for="service">What are you looking for?</label>
@@ -2011,14 +751,11 @@
   </div>
 </section>
 
-<!-- ══════════════ FOOTER ══════════════ -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo">
-          <img src="assets/Logo.png" alt="BlueStrata LLC" />
-        </div>
+        <div class="footer-logo"><img src="assets/Logo.png" alt="BlueStrata LLC" /></div>
         <p class="footer-tagline">Cybersecurity, Microsoft 365 hardening, managed IT, and AI automation for Colorado SMBs.</p>
       </div>
       <div class="footer-col">
@@ -2035,6 +772,8 @@
         <a href="#ai-automation">AI &amp; Automation</a>
         <a href="#industries">Industries</a>
         <a href="#contact">Book a Call</a>
+        <!-- CHANGE 2: IT Assessment link added to footer -->
+        <a href="assessment.html">IT Maturity Assessment</a>
         <a href="https://defaultgateway.substack.com" target="_blank" rel="noopener">The Default Gateway ↗</a>
       </div>
     </div>
@@ -2049,53 +788,33 @@
 </footer>
 
 <script>
-  // ── NAV scroll shadow ──
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
 
-  // ── Hamburger menu ──
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
-
   hamburger.addEventListener('click', () => {
     const open = mobileMenu.classList.toggle('open');
     hamburger.classList.toggle('open', open);
     hamburger.setAttribute('aria-expanded', open);
   });
-  hamburger.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); hamburger.click(); }
-  });
+  hamburger.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); hamburger.click(); } });
 
-  // Close mobile menu on link click
   document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-    });
+    link.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); });
   });
 
-  // ── Scroll fade-in ──
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // ── Smooth scroll for hash links ──
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const offset = 68;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      const top = target.getBoundingClientRect().top + window.scrollY - 68;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
