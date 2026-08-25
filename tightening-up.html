@@ -1,0 +1,21 @@
+---
+layout: default
+title: "Tightening Up | BlueStrata"
+description: "A plain-English security series for small business owners — no jargon, just practical steps to lock down the basics that matter."
+permalink: /tightening-up/
+---
+<section id="series-hub">
+  <div class="container" style="max-width: 760px; padding-top: 140px; padding-bottom: 100px;">
+    <span class="section-label">The Series</span>
+    <h1 class="section-title">Tightening Up</h1>
+    <p class="section-sub" style="margin-bottom:48px;">A plain-English series for small business owners on locking down the basics that actually matter. No jargon, no fear tactics, just clear steps with screenshots.</p>
+
+    {% assign articles = site.tightening_up | sort: 'order' %}
+    {% for article in articles %}
+    <a href="{{ article.url }}" class="series-card">
+      <h3>{{ article.title }}</h3>
+      <p>{{ article.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>

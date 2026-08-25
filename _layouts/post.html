@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section id="article">
+  <div class="container" style="max-width: 760px; padding-top: 140px; padding-bottom: 100px;">
+    {% if page.series %}
+      <a href="{{ page.series_url }}" class="section-label" style="text-decoration:none;">&larr; Back to {{ page.series }}</a>
+    {% endif %}
+    <h1 class="section-title" style="margin-top:18px;">{{ page.title }}</h1>
+    {% if page.date %}
+      <p style="color: var(--steel); font-size: 14px; margin-bottom: 40px;">{{ page.date | date: "%B %-d, %Y" }}</p>
+    {% endif %}
+    <div class="article-body">
+      {{ content }}
+    </div>
+  </div>
+</section>

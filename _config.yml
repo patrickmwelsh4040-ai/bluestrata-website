@@ -1,0 +1,17 @@
+title: BlueStrata LLC
+url: "https://bluestrata.io"
+markdown: kramdown
+
+collections:
+  tightening_up:
+    output: true
+    permalink: /tightening-up/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "tightening_up"
+    values:
+      layout: post
+      series: "Tightening Up"
+      series_url: "/tightening-up/"
