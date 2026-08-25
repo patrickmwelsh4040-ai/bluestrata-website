@@ -279,19 +279,20 @@
     .why-header { margin-bottom: 56px; }
 
     /* Article / series content styles (new) */
-    .article-body { font-size: 17px; line-height: 1.8; color: #2a3f55; }
+    #article, #series-hub { background: var(--navy-deep); }
+    .article-body { font-size: 17px; line-height: 1.8; color: var(--steel-light); }
     .article-body p { margin-bottom: 20px; }
-    .article-body h2 { font-size: 24px; font-weight: 800; color: var(--navy-deep); margin: 40px 0 16px; }
-    .article-body h3 { font-size: 19px; font-weight: 700; color: var(--navy-deep); margin: 32px 0 12px; }
+    .article-body h2 { font-size: 24px; font-weight: 800; color: var(--white); margin: 40px 0 16px; }
+    .article-body h3 { font-size: 19px; font-weight: 700; color: var(--white); margin: 32px 0 12px; }
     .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
     .article-body li { margin-bottom: 8px; }
-    .article-body a { color: var(--blue-accent); }
-    .article-body blockquote { border-left: 3px solid var(--blue-accent); padding-left: 20px; color: var(--steel); font-style: italic; margin: 24px 0; }
+    .article-body a { color: var(--blue-bright); }
+    .article-body blockquote { border-left: 3px solid var(--blue-bright); padding-left: 20px; color: var(--steel-light); font-style: italic; margin: 24px 0; }
 
-    .series-card { text-decoration: none; display: block; border: 1.5px solid #e0e7ef; border-radius: var(--radius-lg); padding: 28px 24px; transition: var(--transition); margin-bottom: 20px; }
-    .series-card:hover { border-color: var(--blue-accent); box-shadow: var(--shadow-card); transform: translateY(-3px); }
-    .series-card h3 { font-size: 18px; font-weight: 700; color: var(--navy-deep); margin-bottom: 8px; }
-    .series-card p { font-size: 14.5px; color: var(--steel); line-height: 1.65; margin: 0; }
+    .series-card { text-decoration: none; display: block; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04); border-radius: var(--radius-lg); padding: 28px 24px; transition: var(--transition); margin-bottom: 20px; }
+    .series-card:hover { border-color: rgba(74,158,255,0.35); background: rgba(255,255,255,0.07); transform: translateY(-3px); }
+    .series-card h3 { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .series-card p { font-size: 14.5px; color: var(--steel-light); line-height: 1.65; margin: 0; }
 
     @media (max-width: 900px) {
       .problem-grid { grid-template-columns: 1fr; gap: 32px; }
