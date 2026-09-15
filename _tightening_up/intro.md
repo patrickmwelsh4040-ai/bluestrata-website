@@ -23,13 +23,11 @@ Here's the part that might surprise you: most of these businesses aren't getting
 
 I'm not telling you this to scare you. I'm telling you because it's fixable, and it doesn't require a six-figure security budget or a full-time IT department. It requires attention, a plan, and someone willing to explain it in plain English instead of acronyms.
 
-That's what this series is.
-
-Over the coming weeks, I'm going to walk you through the exact process I use with my own clients to "tighten up" their security, one piece at a time, in an order that actually makes sense. No jargon for the sake of sounding smart. No fear tactics. No pretending you need to become an IT expert overnight. Just clear, practical steps, with screenshots along the way, so you can follow along even if your IT experience tops out at "I know how to restart the router."
+That's what this series is. I'm going to walk you through the exact process I use with my own clients to "tighten up" their security, one piece at a time. No jargon for the sake of sounding smart. No fear tactics. No pretending you need to become an IT expert overnight. Just clear, practical steps, with screenshots along the way, so you can follow along even if your IT experience tops out at "I know how to restart the router."
 
 Think of it like securing a house. Break-ins are rarely the result of someone cutting through a wall. They're the result of an unlocked back door nobody thought twice about. We're going to go door by door, window by window, and make sure the easy way in isn't easy anymore.
 
-Here's a preview of what's ahead:
+Here's a look at what this series covers:
 
 - Locking down passwords and getting multi-factor authentication in place (yes, even for the employee who swears they'll "get to it eventually")
 - Making sure your email, probably your biggest attack surface, isn't an open invitation for phishing and impersonation
@@ -39,6 +37,7 @@ Here's a preview of what's ahead:
 
 None of this is complicated. It just hasn't been explained to most business owners in a way that didn't feel like homework.
 
-Next week, we start with the fastest, highest-impact fix in this whole series: multi-factor authentication. If you want a head start, go check right now whether MFA is turned on for your business email. If it's not, that's your homework before we get there.
+If you want a head start, the fastest, highest-impact fix in this whole series is multi-factor authentication. Go check right now whether MFA is turned on for your business email. If it's not, that's your first move.
 
 Welcome to the series. Grab a coffee, and let's start tightening things up.
+
