@@ -71,7 +71,7 @@ You don't need to configure these, you just need to know whether somebody alread
 
 **DKIM** adds a digital signature to your outgoing mail. The receiving system checks that signature to confirm the message actually came from your domain and wasn't altered along the way. You never see any of this happening. That's by design.
 
-**DMARC** ties the two together. It tells other mail servers what to do when a message claiming to be from your domain fails those checks — monitor it, quarantine it, or reject it outright. It can also send you reports showing where mail claiming to be "you" is actually coming from.
+**DMARC** ties the two together. It tells other mail servers what to do when a message claiming to be from your domain fails those checks â€” monitor it, quarantine it, or reject it outright. It can also send you reports showing where mail claiming to be "you" is actually coming from.
 
 SPF says who's allowed to send. DKIM proves the message wasn't tampered with. DMARC decides what happens when something doesn't add up.
 

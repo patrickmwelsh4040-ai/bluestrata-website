@@ -5,7 +5,7 @@ date: 2026-09-01
 order: 2
 ---
 
-Go check right now whether MFA is turned on for your business email. If it's already on, good — you're ahead of most of the businesses I walk into. If it's not, or you're not totally sure what you were even looking for, that's fine too. That's what this article is for.
+Go check right now whether MFA is turned on for your business email. If it's already on, good â€” you're ahead of most of the businesses I walk into. If it's not, or you're not totally sure what you were even looking for, that's fine too. That's what this article is for.
 
 Every business has a front door. It's the one every business already has, and it's usually the one nobody actually locked.
 
@@ -48,7 +48,7 @@ Think of it like this: your password is the lock on the front door. MFA is the d
 If you're on Microsoft 365, which most of the businesses I work with are, this lives in your admin center under security settings. The exact screen depends on your license tier, but you're looking for either "Security Defaults" (the simple, all-or-nothing switch) or "Conditional Access" (more control, usually on higher-tier plans). Either one gets you MFA. Don't get stuck picking the "perfect" option. Turning on the simple version today beats spending three weeks researching the ideal configuration.
 
 
-Microsoft's own data backs this up — a 99.9% drop in automated account-takeover attempts once Security Defaults is on.
+Microsoft's own data backs this up â€” a 99.9% drop in automated account-takeover attempts once Security Defaults is on.
 
 
 Once it's on, every employee will get walked through setup the next time they log in. It takes most people about two minutes. Yes, someone will complain. Send them this article.
@@ -70,4 +70,4 @@ This is maybe fifteen minutes of actual work, and it eliminates the single most 
 
 Your homework: pick one account from the list above that you're genuinely not sure about, and go check it. If you don't know whether MFA is enforced on your Microsoft 365 admin accounts specifically, that's the one to check first.
 
-Passwords and MFA lock the front door. Email is usually the next weak point — impersonation, invoice fraud, and lookalike domains are worth a look once this is handled.
+Passwords and MFA lock the front door. Email is usually the next weak point â€” impersonation, invoice fraud, and lookalike domains are worth a look once this is handled.
