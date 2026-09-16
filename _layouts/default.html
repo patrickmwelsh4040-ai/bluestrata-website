@@ -357,13 +357,26 @@
       padding-right: 14px !important;
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1180px) {
       .nav-links {
         display: none;
       }
 
       .hamburger {
         display: flex;
+      }
+    }
+
+    /* Center the desktop navigation group */
+    @media (min-width: 1181px) {
+      .nav-inner {
+        position: relative;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
 
