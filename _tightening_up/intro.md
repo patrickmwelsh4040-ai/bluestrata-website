@@ -37,7 +37,5 @@ Here's a look at what this series covers:
 
 None of this is complicated. It just hasn't been explained to most business owners in a way that didn't feel like homework.
 
-If you want a head start, the fastest, highest-impact fix in this whole series is multi-factor authentication. Go check right now whether MFA is turned on for your business email. If it's not, that's your first move.
-
 Welcome to the series. Grab a coffee, and let's start tightening things up.
 
