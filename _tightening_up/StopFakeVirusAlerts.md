@@ -5,13 +5,11 @@ date: 2026-09-21
 order: 6
 ---
 
-*By Patrick at BlueStrata  |  September 21, 2026*
-
 A client’s computer recently decided to audition for a disaster movie. Warnings about expired protection, antivirus updates, and viruses were piling up on the screen. One even claimed their Android device was at risk. They were using a Windows computer. Apparently, the scammers skipped inventory day.
 
 We stopped the unwanted alerts by blocking a website’s notification permission in the browser. If something similar appears on a business computer, pause before clicking. The alert itself does not prove the computer has a virus, but following its instructions can create a real problem.
 
-![Misleading browser alerts delivered through Microsoft Edge on a client’s computer](/assets/BrowserAlerts.png)
+![Misleading browser alerts delivered through Microsoft Edge on a client’s computer](/assets/tightening-up/BrowserAlerts.png)
 
 *Two misleading alerts on a client’s computer. Both identify Microsoft Edge as the delivery app and display a website address. The Android warning on a Windows PC is another reason to question the message.*
 
