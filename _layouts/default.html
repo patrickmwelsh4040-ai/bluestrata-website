@@ -428,36 +428,22 @@
     <div class="nav-inner">
       <a href="/#home" class="nav-logo"><img src="/assets/Logo.png" alt="BlueStrata LLC" /></a>
       <ul class="nav-links">
-        <li><a href="/it-support/">IT Support</a></li>
-            <li><a href="/security/">Security</a></li>
-            <li><a href="/it-support/#plans">Plans</a></li>
-            <li><a href="/#about">About</a></li>
-        
-        
-        
-        
-        
-        <li><a href="/tightening-up/">Tightening Up</a></li>
-        <li><a href="/phishing-training.html">Phishing Training</a></li>
-        <li><a href="/#contact" class="nav-cta">Book a Call</a></li>
+        <li><a href="/it-support/">IT Projects</a></li>
+        <li><a href="/security/">Security Reviews</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#resources">Resources</a></li>
+        <li><a href="/#contact" class="nav-cta">Request a Call</a></li>
       </ul>
       <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
         <span></span><span></span><span></span>
       </div>
     </div>
     <div class="mobile-menu" id="mobile-menu">
-      <a href="/it-support/" class="mobile-link">IT Support</a>
-        <a href="/security/" class="mobile-link">Security</a>
-        <a href="/it-support/#plans" class="mobile-link">Plans</a>
-        <a href="/#about" class="mobile-link">About</a>
-      
-      
-      
-      
-      
-      <a href="/tightening-up/" class="mobile-link">Tightening Up</a>
-      <a href="/phishing-training.html" class="mobile-link">Phishing Training</a>
-      <a href="/#contact" class="mobile-link">Book a Call</a>
+      <a href="/it-support/" class="mobile-link">IT Projects</a>
+      <a href="/security/" class="mobile-link">Security Reviews</a>
+      <a href="/#about" class="mobile-link">About</a>
+      <a href="/#resources" class="mobile-link">Resources</a>
+      <a href="/#contact" class="mobile-link">Request a Call</a>
     </div>
   </div>
 </nav>
@@ -469,23 +455,22 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo"><img src="/assets/Logo.png" alt="BlueStrata LLC - Integrated for the future" /></div>
-        <p class="footer-tagline">Technology strategy, cybersecurity, Microsoft 365 modernization, cyber insurance readiness, AI governance, and selective ongoing oversight for Colorado SMBs.</p>
+        <p class="footer-tagline">Technology strategy, cybersecurity, Microsoft 365 modernization, cyber insurance readiness, AI governance, and scheduled technology reviews for Colorado SMBs.</p>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <p>Aurora, Colorado</p>
-        <a href="mailto:Patrick.Welsh@BlueStrata.io">Patrick.Welsh@BlueStrata.io</a>
+        <a href="mailto:intake@bluestrata.io">intake@bluestrata.io</a>
         <a href="https://bluestrata.io" target="_blank" rel="noopener">bluestrata.io</a>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
-        <a href="/it-support/">Everyday IT Support</a>
+        <a href="/it-support/">IT Projects</a>
         <a href="/security/#security-baseline">Technology &amp; Security Baseline</a>
         <a href="/security/#scenarios">Offerings</a>
         <a href="/security/#how-it-works">Quarterly Review</a>
         <a href="/security/#remediation">Cyber Insurance</a>
         <a href="/security/#ai-automation">AI Governance</a>
-        <a href="/security/#oversight">Ongoing Oversight</a>
         <a href="/security/#capabilities">Capability Demonstrations</a>
         <a href="/assessment.html">Technology Readiness Check</a>
         <a href="/phishing-training.html">Free Phishing Awareness Training</a>
@@ -526,12 +511,6 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  document.querySelectorAll('.snapshot-cta').forEach(link => {
-    link.addEventListener('click', () => {
-      const serviceSelect = document.getElementById('service');
-      if (serviceSelect) serviceSelect.value = 'Free External Security Snapshot';
-    });
-  });
 
   document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
